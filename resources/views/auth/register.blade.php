@@ -1,0 +1,46 @@
+@extends('partials.layout')
+
+@section('title', 'Crear cuenta')
+
+@section('content')
+    <div class="container-fluid login">
+        <div class="text-center mt-5">
+            <br>
+            <a class="navbar-brand" href="/" alt="Logo FZY"><img src="{{ asset('assets/images/logo/fzy-logo-dark.png') }}" alt="Logo FZY - Fresh Your Zone" class="logo-fzy"></a>
+        </div>
+        <div class="card ms-5 me-5 p-3">
+            <h5>Crear cuenta</h5>
+            <form action="{{ route('login.store') }}" method="POST">
+                @csrf
+
+                <div class="mb-3 mt-1">
+                    <label for="name" class="form-label">Nombre <span class="text-danger">*</label>
+                    <input type="name" class="form-control" id="name" name="name" aria-describedby="nameError" placeholder="Ingrese su nombre" value="{{ old('name') }}">
+                    @error('name')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico <span class="text-danger">*</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailError" placeholder="Ingrese su correo electrónico" value="{{ old('email') }}">
+                    @error('email')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña <span class="text-danger">*</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese su contraseña">
+                    @error('password')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            <p></p>
+            <a href="/login" >Iniciar sesión</a>
+        </div>
+    </div>
+@endsection

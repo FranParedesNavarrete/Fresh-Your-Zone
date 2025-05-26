@@ -1,0 +1,16 @@
+#navHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  text-decoration: none !important;
+  color: red !important;
+}
+
+@media (max-width: 768px) {
+  #navHeader {
+    display: flex;
+    justify-content: space-between;
+  }
+}/*# sourceMappingURL=style.css.map */
