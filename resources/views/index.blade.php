@@ -43,7 +43,7 @@
                                     </div>
 
                                     <a href="{{ route('products.show', $product->slug ) }}" class="text-decoration-none text-dark">
-                                        <img class="card-img-top" src="{{ $imagenPortada ? asset('storage/' . $imagenPortada) : 'https://imagenpng.com/wp-content/uploads/2015/09/imagenes-png.png' }}" alt="Imagen principal del producto {{ $product->name }}">
+                                        <img class="card-img-top" src="{{ $imagenPortada ? asset('storage/' . $imagenPortada) : asset('storage/products/product-image-default.jpg') }}" alt="Imagen principal del producto {{ $product->name }}">
                                         <div class="card-body">
                                             <p class="card-text">{{ $product->name }}</p>
                                             <h5 class="card-title">{{ $product->price }} €</h5>
