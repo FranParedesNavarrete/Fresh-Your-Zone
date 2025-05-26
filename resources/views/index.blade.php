@@ -6,7 +6,7 @@
     <div class="navbar navbar-expand-lg navbar-category pb-2">
         <div class="container">
             @foreach($categories as $category)
-                <a class="nav-link category-navbar" href="/products?category={{ $category }}">{{ ucfirst($category) }}</a>
+                <a class="text-dark category-navbar" href="/products?category={{ $category }}">{{ ucfirst($category) }}</a>
             @endforeach
         </div>
     </div>
