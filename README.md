@@ -19,29 +19,31 @@
 - Git y  GitHub para control de versiones
 
 ## FZY Sponsors
-Queremos agradecer a los sponsors que apoyan el desarrollo de FZY Si esta interesado en ser un sponsor, por facor visita este [enlace de afiliación](https://www.google.com/url?sa=i&url=https%3A%2F%2Fx.com%2FDefensaAnimalZA%2Fstatus%2F1450733997156360194&psig=AOvVaw2n66AvogwpcA9r8J4LHViI&ust=1748433841333000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOD_-uHNw40DFQAAAAAdAAAAABAE).
+Queremos agradecer a los sponsors que apoyan el desarrollo de FZY. Si estas interesado en ser un sponsor, por favor visita este [enlace de afiliación](https://www.google.com/url?sa=i&url=https%3A%2F%2Fx.com%2FDefensaAnimalZA%2Fstatus%2F1450733997156360194&psig=AOvVaw2n66AvogwpcA9r8J4LHViI&ust=1748433841333000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOD_-uHNw40DFQAAAAAdAAAAABAE).
 
 ## Instalación del proyecto
  ### 1. Clonar el repositorio
- git clone https://github.com/FranParedesNavarrete/Fresh-Your-Zone.git
+ Ejecuta `git clone https://github.com/FranParedesNavarrete/Fresh-Your-Zone.git` en tu terminal para clonar el repositorio.
 
  ### 2. Instalar las dependencias
- composer install
- npm install && npm run dev
+ Ejecuta `composer install` en tu terminal para instalar composer dentro de la carpeta del proyecto.
+ Instala `npm install && npm run dev`.
 
  ### 3. Crear el archivo .env y configurar las credenciales
- 
+ Ejecuta `cp .env.example .env` para copiar como `.env` si usas Mac/Unix/Linux.
+ Ejecuta `copy .env.example .env` para copiar como `.env` si usas Windows.
+
  ### 4.Ejecutar las migraciones
  php artisan migrate:fresh
 
  ### 5. Arrancar el servidor
  php artisan serve
- *Si se arranca desde Laragon no hace falta ejecutar el comando, solo darle al boton 'start'
+ *Si usas Laragon no hace falta ejecutar el comando, solo inicia el servidor desde la interfaz.
 
 ## Contribuciones
 Las contribuciones son acptadas, no dudes en enviar tus Pull Requests, abrir issues o sugerir mejoras. 
 
-## License
+## Licencia
 Este proyecto usa la licencia [MIT](https://opensource.org/licenses/MIT).
 
 <p align="center">Gracias por visitar FZY</p> 
