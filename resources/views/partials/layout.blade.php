@@ -15,6 +15,22 @@
 <body class="lightmode">
     @include('partials.header')
 
+    <!-- Mostrar alerta en caso de exito -->
+    @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show mx-3 mt-3" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+    @endif
+
+    <!-- Mostrar alerta en caso de error -->
+    @if (session('error'))
+        <div class="alert alert-danger alert-dismissible fade show mx-3 mt-3" role="alert">
+            {{ session('error') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+    @endif
+
     <main>
         @yield('content')
     </main>

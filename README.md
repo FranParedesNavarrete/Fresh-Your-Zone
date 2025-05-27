@@ -5,13 +5,12 @@
 **Fresh Your Zone (FZY)** es una aplicación web pensada para la compra y venta de ropa entre usuarios. Permite a compradores y vendedores registrarse, subir productos, gestionar pedidos y comunicarse de forma sencilla. Nuesrto objetivo es ofrecer una experiencia rápida, segura y visualmente atractiva para quienes buscan renovar su estilo o dar una segunda vida a sus prendas.
 
 ## Funcionalidades Principales
-- Registro de usuarios tanto compradores o vendedores
-- Subida de productos con imágenes y descripcion
+- Registro y autenticacion de usuarios 
+- Subida de productos con imágenes, descripciones y categorías
 - Sistema de pedidos y gestión de ventas
-- Panel de administración con gestión de usuarios y contenido
-- Diseño responsive e interfaz amigable
-
-FZY es accesible para todos, inclusivo y con desarrollo constante para mejorar cada dia.
+- Panel de administración con gestión de usuarios, productos y pedidos
+- Diseño responsive optimizado para dispositivos móviles y escritorio
+- Modo claro y oscuro 
 
 ## Tecnologías utilizadas
 - Laravel
@@ -22,29 +21,27 @@ FZY es accesible para todos, inclusivo y con desarrollo constante para mejorar c
 ## FZY Sponsors
 Queremos agradecer a los sponsors que apoyan el desarrollo de FZY Si esta interesado en ser un sponsor, por facor visita este [enlace de afiliación](https://www.google.com/url?sa=i&url=https%3A%2F%2Fx.com%2FDefensaAnimalZA%2Fstatus%2F1450733997156360194&psig=AOvVaw2n66AvogwpcA9r8J4LHViI&ust=1748433841333000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOD_-uHNw40DFQAAAAAdAAAAABAE).
 
-### Premium Partners
+## Instalación del proyecto
+ ### 1. Clonar el repositorio
+ git clone https://github.com/FranParedesNavarrete/Fresh-Your-Zone.git
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+ ### 2. Instalar las dependencias
+ composer install
+ npm install && npm run dev
 
-## Contributing
+ ### 3. Crear el archivo .env y configurar las credenciales
+ 
+ ### 4.Ejecutar las migraciones
+ php artisan migrate:fresh
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+ ### 5. Arrancar el servidor
+ php artisan serve
+ *Si se arranca desde Laragon no hace falta ejecutar el comando, solo darle al boton 'start'
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Contribuciones
+Las contribuciones son acptadas, no dudes en enviar tus Pull Requests, abrir issues o sugerir mejoras. 
 
 ## License
+Este proyecto usa la licencia [MIT](https://opensource.org/licenses/MIT).
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<p align="center">Gracias por visitar FZY</p> 
