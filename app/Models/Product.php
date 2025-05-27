@@ -19,6 +19,7 @@ class Product extends Model
         'images'
     ];
 
+    // Función para permitir el slug
     public static function boot()
     {
         parent::boot();
@@ -34,28 +35,27 @@ class Product extends Model
         });
     }
 
+    // Relación con el vendedor
     public function sellers()
     {
         return $this->belongsTo(User::class, 'seller_id');
     }
 
+    // Relación para saber de quien es favorito el producto
     public function favoritedBy()
     {
         return $this->belongsToMany(User::class, 'favorites');
     }
 
+    // Relación para obtener las reseñas al producto
     public function reviews()
     {
         return $this->belongsToMany(User::class, 'product_reviews')->withPivot('review', 'date');
     }
 
+    // Relacion con pedidos
     public function orders()
     {
         return $this->hasMany(Order::class, 'product_id');
-    }
-
-    public function deliveryPoints()
-    {
-        return $this->belongsToMany(DeliveryPoint::class, 'delivery_product');
     }
 }

@@ -52,6 +52,11 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
+        // Verifica que el usuario sea el dueño del perfil
+        if (auth()->user()->id != $user->id) {
+            return redirect()->route('index')->with('error', 'Error no puedes acceder a este perfil');
+        }
+
         return view('profile.show', compact('user'));
     }
 
@@ -68,6 +73,12 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, User $user)
     {
+        // Verifica que el usuario sea el dueño del perfil
+        if (auth()->user()->id != $user->id) {
+            return redirect()->route('index')->with('error', 'Error no puedes acceder a este perfil');
+        }
+
+
         // Verifica que los datos recibidos sean válidos para actualizar el perfil del usuario
         try {
             $user->name = $request->input('name');
@@ -101,14 +112,27 @@ class UserController extends Controller
         return redirect()->route('admin.index')->with('success', 'Usuario eliminado con éxito');
     }
 
+    // Función para mostrar todas las notificaciones del usuario
     public function notifications(User $user)
     {
+        // Verifica que el usuario sea el dueño del perfil
+        if (auth()->user()->id != $user->id) {
+            return redirect()->route('index')->with('error', 'Error no puedes acceder a este perfil');
+        }
+
         $notifications = Notification::where('user_id', $user->id)->orderBy('updated_at', 'desc')->get(); // Obtener las notificaciones del usuario
         return view('profile.notifications', compact('user', 'notifications'));
     }
 
+    // Función para guardar el nuevo avatar del usuario en el servidor y en la base de datos
     public function changeAvatar(Request $request, User $user) 
     {
+        // Verifica que el usuario sea el dueño del perfil
+        if (auth()->user()->id != $user->id) {
+            return redirect()->route('index')->with('error', 'Error no puedes acceder a este perfil');
+        }
+
+        // Si no se ha recibido una imagen se redirige sin hacer cambios en el perfil de usuario
         if (!$request->hasFile('avatar')) {
             return redirect()->route('profile.index', $user->slug)->with('error', 'No se ha subido ninguna imagen.');
         }
@@ -127,35 +151,55 @@ class UserController extends Controller
         return redirect()->route('profile.index', $user->slug)->with('success', 'Avatar actualizado con éxito');    
     }
 
+    // Función para mostrar todos los productos marcados como favoritos del usuario 
     public function favorites(User $user)
     {
+        // Verifica que el usuario sea el dueño del perfil
+        if (auth()->user()->id != $user->id) {
+            return redirect()->route('index')->with('error', 'Error no puedes acceder a este perfil');
+        }
+
         $favorites = $user->favoriteProducts;; // Obtener los productos favoritos del usuario
         return view('profile.favorites', compact('user', 'favorites'));
     }
 
+    // Función para cambiar la contraseña del usuario
     public function changePassword(UpdatePasswordRequest $request)
     {
         $user = auth()->user();
+
         // Verifica que la contraseña actual coincida
         if (!Hash::check($request->actual_password, $user->password)) {
             return back()->withErrors(['actual_password' => 'La contraseña actual no es correcta.']);
         }
 
-        // Cambia la contraseña
+        // Cambia la contraseña de la base de datos
         $user->password = Hash::make($request->new_password);
         $user->save();
 
         return redirect()->back()->with('success', 'Contraseña actualizada correctamente.');
     }
 
+    // Funcion para mostrar el historial de compras del usuario
     public function history(User $user) 
     {
+        // Verifica que el usuario sea el dueño del perfil
+        if (auth()->user()->id != $user->id) {
+            return redirect()->route('index')->with('error', 'Error no puedes acceder a este perfil');
+        }
+
         $orders = Order::where('buyer_id', $user->id)->orderBy('created_at', 'desc')->get(); // Obtener los 'pedidos' del usuario
         return view('profile.history', compact('user', 'orders'));
     }
 
+    // Función para mostrar todas las ventas del usuario vendedor
     public function salesHistory(User $user)
     {
+        // Verifica que el usuario sea el dueño del perfil
+        if (auth()->user()->id != $user->id) {
+            return redirect()->route('index')->with('error', 'Error no puedes acceder a este contenido');
+        }
+
         // Verificar que el usuario tenga el rol de vendedor
         if ($user->role != 'seller') {
             return redirect()->back()->with('error', 'No tienes permiso para acceder a esta sección.');
@@ -165,8 +209,14 @@ class UserController extends Controller
         return view('profile.salesHistory', compact('user', 'sales'));
     }
 
+    // Función para mostrar todos los productos en venta del usuario vendedor
     public function manageProducts(User $user) 
     { 
+        // Verifica que el usuario sea el dueño del perfil
+        if (auth()->user()->id != $user->id) {
+            return redirect()->route('index')->with('error', 'Error no puedes acceder a este contenido');
+        }
+
         // Verificar que el usuario tenga el rol de vendedor
         if ($user->role != 'seller') {
             return redirect()->route('index')->with('error', 'No tienes permiso para acceder a esta sección.');
@@ -199,6 +249,7 @@ class UserController extends Controller
         return view('profile.manageProducts', compact('user', 'products', 'categories', 'states'));
     }
 
+    // Función para guardar el numero de teléfono mediante una petición AJAX
     public function savePhone(Request $request)
     {
         // Buscar el número de teléfono en la base de datos y si ya existe devolver un error
@@ -215,6 +266,7 @@ class UserController extends Controller
         return response()->json(['success' => true, 'message' => 'Número de teléfono guardado correctamente.']);
     }
 
+    // Función para guardar la dirección mediante una petición AJAX
     public function saveAddress(Request $request)
     {
         // Obtener el usuario autenticado y actualizar la dirección
@@ -225,8 +277,10 @@ class UserController extends Controller
         return response()->json(['success' => true, 'message' => 'Dirección guardada correctamente.']);
     }
 
+    // Para cambiar el rol del usuario a vendedor
     public function changeRole(Request $request)
     {
+        // Verificar que el usuario esté autenticado
         if (!auth()->check()) {
             return response()->json(['success' => false, 'message' => 'No tienes permiso para cambiar el rol.']);
         }

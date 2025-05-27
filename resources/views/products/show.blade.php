@@ -46,7 +46,7 @@
                                 <h4 class="text-success">En stock</h4>
                             @endif
 
-                            @if (auth()->check() && auth()->user()->role == 'seller' && auth()->user()->id == $product->user_id)
+                            @if (auth()->check() && auth()->user()->role == 'seller' && auth()->user()->id == $product->seller_id)
                                 <a class="btn btn-warning" style="width: 7rem;" data-bs-toggle="modal" data-bs-target="#editProductModal">Editar</a>
                             @else
                                 <div class="product-buttons">

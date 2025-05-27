@@ -15,6 +15,7 @@ class Notification extends Model
         'updated_at'
     ];
 
+    // Relación con usuarios
     public function user()
     {
         return $this->belongsTo(User::class);

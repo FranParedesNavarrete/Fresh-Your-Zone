@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->date('datetime');
+            $table->datetime('date');
             $table->string('subject', 255);
             $table->enum('type', ['admin', 'transacción']);
 

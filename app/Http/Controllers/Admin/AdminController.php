@@ -31,6 +31,7 @@ class AdminController extends Controller
 
         $users = User::query();
 
+        // Filtrar por tipo de usuario
         if ($request->input('user_type')) {
             $users = $users->where('role', $request->input('user_type'));
         }
@@ -99,6 +100,7 @@ class AdminController extends Controller
 
         $products = Product::query();
 
+        // Filtrar por categoría de producto
         if ($request->input('category')) {
             $products = $products->where('category', $request->input('category'));
         }
@@ -111,7 +113,7 @@ class AdminController extends Controller
 
         $categories = [];
 
-        // Si se encuentra una coincidencia, extraer las categorías y convertirlas en un array
+        // Si se encuentra una coincidencia, extraer las categorías 
         if (!empty($matches[1])) {
             $categories = array_map(function ($value) {
                 return trim($value, "'");
@@ -128,8 +130,9 @@ class AdminController extends Controller
             return redirect()->route('index')->with('error', 'No tienes permiso para acceder a esta sección.');
         }
 
-        $product = Product::find($request->input('product_id'));
+        $product = Product::find($request->input('product_id')); // Buscar el producto a eliminar
 
+        // Si lo encuentra separa las imágenes y las elimmina del servidor, le envia una notificación al vendedor y borra de la base de datos
         if ($product) {
             // Guarda en un array las imágenes del producto
             $imagenes = explode('|', $product->images);
@@ -164,7 +167,7 @@ class AdminController extends Controller
 
         $user = auth()->user(); // Obtener el usuario autenticado
 
-        $orders = Order::orderBy('created_at', 'desc')->get();
+        $orders = Order::orderBy('created_at', 'desc')->get(); // Ordernar por fecha de creación
 
         $statusesDB = DB::selectOne("SHOW COLUMNS FROM orders WHERE Field = 'status'")->Type; // Extraer todas los estados de la tabla
 
@@ -172,7 +175,7 @@ class AdminController extends Controller
 
         $statuses = [];
 
-        // Si se encuentra una coincidencia, extraer los estados y convertirlas en un array
+        // Si se encuentra una coincidencia, extraer los estados 
         if (!empty($matches[1])) {
             $statuses = array_map(function ($value) {
                 return trim($value, "'");
@@ -190,12 +193,14 @@ class AdminController extends Controller
             return redirect()->route('index')->with('error', 'No tienes permiso para acceder a esta sección.');
         }
 
-        $order = Order::find($request->input('order_id'));
+        $order = Order::find($request->input('order_id')); // Busca el pedido a modificar
     
+        // Si no existe salta error junto con un mensaje
         if (!$order) {
             return response()->json(['success' => false, 'message' => 'Pedido no encontrado.']);
         }
         
+        // Si lo encuentra cambia el estado del pedido al seleccionado
         $order->fill(['status' => $request->input('status')]);
         $order->save(); 
 

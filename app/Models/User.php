@@ -32,6 +32,7 @@ class User extends Authenticatable
         'avatar'
     ];
 
+    // Función para permitir el slug
     public static function boot()
     {
         parent::boot();
@@ -75,22 +76,25 @@ class User extends Authenticatable
         ];
     }
 
+    // Relación para saber los productos que tiene en venta un usuario
     public function porductsForSale()
     {
         return $this->HasMany(Order::class, 'seller_id');
     }
 
+    // Relación para saber las compras de un usuario
     public function buys()
     {
         return $this->HasMany(Order::class, 'buyer_id');
     }
 
+    // Relación para saber los productos favoritos
     public function favoriteProducts()
     {
         return $this->belongsToMany(Product::class, 'favorites');
     }
 
-    // Revisa si el usuario ha comprado un producto y si ha dejado una reseña, si no ha dejado una reseña, devuelve true
+    // Función para saber si el usuario ha comprado un producto y si ha dejado una reseña, si no ha dejado una reseña, devuelve true
     public function canReview(Product $product): bool
     {
         $hasPurchased = Order::where('buyer_id', $this->id)
@@ -105,11 +109,13 @@ class User extends Authenticatable
         return $hasPurchased && !$hasReviewed;
     }
 
+    // Relación para saber que productos ha dejado el usuario una reseña
     public function reviewedProducts()
     {
         return $this->belongsToMany(Product::class, 'product_reviews')->withPivot('review', 'date');
     }
 
+    // Relación con notificaciones
     public function notifications()
     {
         return $this->hasMany(Notification::class);

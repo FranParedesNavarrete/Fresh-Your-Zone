@@ -27,7 +27,7 @@ class OrderController extends Controller
         $user = Auth::user();
         $deliveryPoints = DeliveryPoint::all();
 
-        // Si no hay productos en el carrito, redirige al inicio
+        // Si no hay productos en el carrito, redirige al inicio compactando las categorias disponibles de la base de datos
         if (empty($ids)) {
             $products = Product::all();
 
@@ -36,7 +36,7 @@ class OrderController extends Controller
             preg_match('/^enum\((.*)\)$/', $rawType, $matches); // Extraer el valor de la categoría
             $categories = [];
     
-            // Si se encuentra una coincidencia, extraer las categorías y convertirlas en un array
+            // Si se encuentra una coincidencia, extraer las categorías
             if (!empty($matches[1])) {
                 $categories = array_map(function ($value) {
                     return trim($value, "'");
@@ -74,6 +74,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
+        // Preparar los datos para crear el pedido
         $buyerId = auth()->id();
         $productIds = $request->input('product_id');
         $price = $request->input('price');
@@ -87,6 +88,7 @@ class OrderController extends Controller
 
         $orderIds = [];
 
+        // Iterar todos los ids de los productos, si ya existe el pedido se actualiza, si no existe se crea y se guarda el id del pedido en la session
         foreach ($productIds as $productId) {
             $product = Product::findOrFail($productId);
     
@@ -164,6 +166,7 @@ class OrderController extends Controller
         //
     }
 
+    // Función para obtener los productos del carrito
     public function shoppingCart() {
         // Obtener los productos del carrito de la base de datos
         $orders = Order::with('product')
@@ -174,6 +177,7 @@ class OrderController extends Controller
         return view('orders.cart', compact('orders'));
     }
 
+    // Función para guardar los productos en el carrito
     public function moveToShoppingCart(Request $request) {
         // Obtener el producto con el id recibido, el id del vendedor y el id del comprador
         $product = Product::findOrFail($request->input('id'));
@@ -208,6 +212,7 @@ class OrderController extends Controller
         return response()->json(['success' => true, 'message' => 'Producto guardado en el carrito.']);
     }
 
+    // Función para quitar un producto del carrito
     public function removeFromShoppingCart(Request $request) 
     {
         // Obtener el producto con el id recibido, el id del vendedor y el id del comprador
@@ -225,6 +230,7 @@ class OrderController extends Controller
         return response()->json(['success' => true, 'message' => 'Producto eliminado del carrito']);
     }
 
+    // Función que recibe los ids de los prodcutos a comprar y los guarda en la session
     public function prepareProducts(Request $request) 
     {
         // Obtener el id o los ids de los productos del carrito
@@ -240,6 +246,7 @@ class OrderController extends Controller
         return response()->json(['success' => true, 'message' => 'Producto eliminado del carrito']);
     }
 
+    // Función que recibe los nuevos pedidos y los muestra en la vista de pedido completado
     public function success() 
     {
         $orderIds = session('last_orders', []); // Obtener los pedidos de la sesión
@@ -249,6 +256,7 @@ class OrderController extends Controller
             return redirect('/')->with('error', 'No se encontraron órdenes recientes');
         }
 
+        // Guardar los pedidos para compactarlos en la vista de pedido completado
         $orders = Order::with('product')
         ->whereIn('id', $orderIds)
         ->where('status', 'pedido')

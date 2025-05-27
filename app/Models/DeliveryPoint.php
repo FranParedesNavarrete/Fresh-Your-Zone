@@ -14,6 +14,7 @@ class DeliveryPoint extends Model
         'contact'
     ];
 
+    // Relación con productos 
     public function products()
     {
         return $this->belongsToMany(Product::class, 'delivery_product');

@@ -25,29 +25,35 @@ class ProductController extends Controller
     {
         $products = Product::query();
 
+        // Filtrar por busqueda, muestra todos los productos que coincidan tanto en nombre de producto como en descripción
         if ($request->filled('search')) {
             $products->where('name', 'like', '%' . $request->input('search') . '%')
             ->orWhere('description', 'like', '%' . $request->input('search') . '%');
         }
         
+        // Filtrar por categoria del producto
         if ($request->filled('category')) {
             $products->where('category', $request->input('category'));
         }
         
+        // Filtrar por estado del producto
         if ($request->filled('state')) {
             $products->where('state', $request->input('state'));
         }
         
+        // Filtrar por disponibilidad de producto, mmuestra solo los que el stock sea más de 0
         if ($request->filled('available')) {
             $products->where('stock', '>', 0);
         }
 
+        // Filtrar por precio, si se utiliza el input de tipo range se muetran los pedidos que esten 5€ y por debajo
         if ($request->input('price')) {
             if (!Str::contains($request->input('price'), '-')) {
                 $price = (float) $request->input('price');
                 $products->whereBetween('price', [$price - 5, $price + 5]);
             }
 
+            // Si se selecciona un rango de precio se quita el '-' y se muestran los productos que esten en ese rango de precio
             $priceRange = explode('-', $request->input('price'));
             if (count($priceRange) === 2) {
                 $minPrice = (float)$priceRange[0];
@@ -149,13 +155,13 @@ class ProductController extends Controller
         $categories = [];
         $states = [];
 
-        // Si se encuentra una coincidencia, extraer las categorías y convertirlas en un array
+        // Si se encuentra una coincidencia, extraer las categorías
         if (!empty($matches[1])) {
             $categories = array_map(function ($value) {
                 return trim($value, "'");
             }, explode(',', $matches[1]));
         }
-        // Si se encuentra una coincidencia, extraer los estados y convertirlos en un array
+        // Si se encuentra una coincidencia, extraer los estados 
         if (!empty($matchesStates[1])) {
             $states = array_map(function ($value) {
                 return trim($value, "'");
@@ -178,6 +184,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        // Si se reciben imagenes o imagen se eliminan las anteriores del servidor y de la base de datos y se guardan las nuevas
         if ($request->hasFile('images')) {
             // Eliminar las imágenes antiguas de la carpeta 'products'
             $oldImages = explode('|', $product->images);
@@ -194,6 +201,7 @@ class ProductController extends Controller
             $product->images = implode('|', $imageNames); // Guardar las imágenes como una cadena de texto separada por '|'
         }
 
+        // Actualización de los datos del producto a editar
         $product->update([
             'name' => $request->name,
             'price' => $request->price,
@@ -240,7 +248,7 @@ class ProductController extends Controller
         preg_match('/^enum\((.*)\)$/', $rawType, $matches); // Extraer el valor de la categoría
         $categories = [];
 
-        // Si se encuentra una coincidencia, extraer las categorías y convertirlas en un array
+        // Si se encuentra una coincidencia, extraer las categorías
         if (!empty($matches[1])) {
             $categories = array_map(function ($value) {
                 return trim($value, "'");
@@ -254,6 +262,7 @@ class ProductController extends Controller
         return view('index', compact('products', 'categories', 'favorites', 'categoriesIndex'));
     }
 
+    // Función para poder poner una reseña a un producto comprado, solo permite poner una por producto comprado
     public function review(Request $request, Product $product)
     {
         $user = Auth::user();
