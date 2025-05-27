@@ -42,7 +42,7 @@ function changeDarkmodeClass() {
     let darkmodeBtn = document.querySelector('.darkmodeBtn');
     let darkmodeIcon = document.getElementById('darkmodeIcon');
 
-    let logoFZY = document.querySelector('.logo-fzy');
+    let logoFZY = document.querySelectorAll('.logo-fzy');
 
     if(localStorage.getItem('darkmode') === 'true') {
         document.body.classList.remove('lightmode');
@@ -52,7 +52,10 @@ function changeDarkmodeClass() {
         darkmodeIcon.classList.add('bi-sun-fill', 'text-dark');
         darkmodeBtn.style.backgroundColor = '#d4cdc5';
 
-        logoFZY.src = '/assets/images/logo/fzy-logo-light.png';
+        logoFZY.forEach(logo => {
+            logo.src = '/assets/images/logo/fzy-logo-light.png';
+        });
+
     }else {
         document.body.classList.remove('darkmode');
         document.body.classList.add('lightmode');
@@ -61,7 +64,9 @@ function changeDarkmodeClass() {
         darkmodeIcon.classList.add('bi-moon-fill');
         darkmodeBtn.style.backgroundColor = '#262525';
 
-        logoFZY.src = '/assets/images/logo/fzy-logo-dark.png';
+        logoFZY.forEach(logo => {
+            logo.src = '/assets/images/logo/fzy-logo-dark.png';
+        });
     }
 }
 
