@@ -9,6 +9,7 @@ use App\Http\Controllers\Favorite\FavoriteController;
 use App\Http\Controllers\Order\OrderController;
 use App\Http\Controllers\Payment\PaymentController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Information\InformationController;
 
 // Rutas de autenticación
 Route::get('/login', [AuthController::class, 'index'])->name('login');
@@ -65,6 +66,13 @@ Route::get('/orders/resume', [OrderController::class, 'index'])->name('orders.in
 Route::get('/orders/cart', [OrderController::class, 'shoppingCart'])->name('orders.cart')->middleware('auth');
 Route::post('/orders/store', [OrderController::class, 'store'])->name('orders.store');
 Route::get('/orders/success', [OrderController::class, 'success'])->name('orders.success')->middleware('auth');
+
+// Rutas de información
+Route::get('about-us', [InformationController::class, 'aboutUs'])->name('about.us');
+Route::get('information/terms-conditions', [InformationController::class, 'termsAndConditions'])->name('information.terms.conditions');
+Route::get('information/privacy-policy', [InformationController::class, 'privacyPolicy'])->name('information.privacy-policy');
+Route::get('information/cookies-policy', [InformationController::class, 'cookiesPolicy'])->name('information.cookies.policy');
+Route::get('information/legal-policy', [InformationController::class, 'legalNotice'])->name('information.legal.policy');
 
 // Ruta de inicio
 Route::get('/', [ProductController::class, 'homeProducts'])->name('index');

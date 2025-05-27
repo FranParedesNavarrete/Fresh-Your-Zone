@@ -4,15 +4,16 @@
             <nav class="nav justify-content-between gap-5 mb-1 mt-4 text-start border-bottom border-dark mb-3 w-75">
                 <ul class="p-0">
                     <li class="text-dark fs-5 fw-medium">Información</li>
-                    <li><a class="nav-link text-dark p-1" href="#terms">Términos y condiciones</a></li>
-                    <li><a class="nav-link text-dark p-1" href="#privacy">Política de privacidad</a></li>
-                    <li><a class="nav-link text-dark p-1" href="#cookies">Política de cookies</a></li>
-                    <li><a class="nav-link text-dark p-1" href="#legal">Aviso legal</a></li>
+                    <li><a class="nav-link text-dark p-1" href="/information/terms-conditions">Términos y condiciones</a></li>
+                    <li><a class="nav-link text-dark p-1" href="/information/privacy-policy">Política de privacidad</a></li>
+                    <li><a class="nav-link text-dark p-1" href="/information/cookies-policy">Política de cookies</a></li>
+                    <li><a class="nav-link text-dark p-1" href="/information/legal-policy">Aviso legal</a></li>
                 </ul>   
                 
                 <ul>
                     <li class="text-dark fs-5 fw-medium">Contacto</li>
                     <div class="d-flex flex-column">
+                        <li><a class="nav-link text-dark p-1" href="/about-us">About Us</a></li>
                         <li><a class="nav-link text-dark p-1" href="mailto:freshyourzone@gmail.com">Email: freshyourzone@gmail.com </a></li>
                         <li><a class="nav-link text-dark p-1">Teléfono: 123-456-789</a></li>
                         <li><a class="nav-link text-dark p-1">Dirección: Calle FZY, 123</a></li>

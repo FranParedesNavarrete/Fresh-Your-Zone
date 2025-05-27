@@ -1,6 +1,6 @@
 <p align="center"><img src="public/assets/images/logo/fzy-logo-dark.png" width="400" alt="FZY Logo"></p>
 
-## About FZY
+## Sobre FZY
 
 **Fresh Your Zone (FZY)** es una aplicación web pensada para la compra y venta de ropa entre usuarios. Permite a compradores y vendedores registrarse, subir productos, gestionar pedidos y comunicarse de forma sencilla. Su objetivo es ofrecer una experiencia rápida, segura y visualmente atractiva para quienes buscan renovar su estilo o dar una segunda vida a sus prendas.
 
