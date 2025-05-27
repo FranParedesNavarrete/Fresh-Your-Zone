@@ -2,29 +2,25 @@
 
 ## Sobre FZY
 
-**Fresh Your Zone (FZY)** es una aplicación web pensada para la compra y venta de ropa entre usuarios. Permite a compradores y vendedores registrarse, subir productos, gestionar pedidos y comunicarse de forma sencilla. Su objetivo es ofrecer una experiencia rápida, segura y visualmente atractiva para quienes buscan renovar su estilo o dar una segunda vida a sus prendas.
+**Fresh Your Zone (FZY)** es una aplicación web pensada para la compra y venta de ropa entre usuarios. Permite a compradores y vendedores registrarse, subir productos, gestionar pedidos y comunicarse de forma sencilla. Nuesrto objetivo es ofrecer una experiencia rápida, segura y visualmente atractiva para quienes buscan renovar su estilo o dar una segunda vida a sus prendas.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Funcionalidades Principales
+- Registro de usuarios tanto compradores o vendedores
+- Subida de productos con imágenes y descripcion
+- Sistema de pedidos y gestión de ventas
+- Panel de administración con gestión de usuarios y contenido
+- Diseño responsive e interfaz amigable
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+FZY es accesible para todos, inclusivo y con desarrollo constante para mejorar cada dia.
 
-## Learning Laravel
+## Tecnologías utilizadas
+- Laravel
+- MySQL
+- Bootstrap 5
+- Git y  GitHub para control de versiones
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## FZY Sponsors
+Queremos agradecer a los sponsors que apoyan el desarrollo de FZY Si esta interesado en ser un sponsor, por facor visita este [enlace de afiliación](https://www.google.com/url?sa=i&url=https%3A%2F%2Fx.com%2FDefensaAnimalZA%2Fstatus%2F1450733997156360194&psig=AOvVaw2n66AvogwpcA9r8J4LHViI&ust=1748433841333000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOD_-uHNw40DFQAAAAAdAAAAABAE).
 
 ### Premium Partners
 
