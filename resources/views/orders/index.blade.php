@@ -7,7 +7,7 @@
         <div class="container">
             <h2>Resumen del Pedido</h2>
             <p></p>
-            <div class="purchase-summary">
+            <div class="purchase-summary w-100">
                 @component('components.table', ['columns' => ['imagenes', 'producto', 'descripción', 'estado', 'precio'], 'data' => $products])
 
                 @endcomponent
