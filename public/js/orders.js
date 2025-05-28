@@ -35,36 +35,42 @@ function showTotalPrice() {
 }
 
 // Función para agregar un producto al carrito 
-function moveToShoppingCart(productId) {
-    // Se hace una petición AJAX de tipo POST para enviar al controlador el id del producto que se desea guardar en el carrito
-    fetch(`/products/move-to-cart`, {
-        method: 'POST',
-        headers: {
-            'X-CSRF-TOKEN': csrfToken,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        },
-        body : JSON.stringify({id: productId})
-    })
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        // Guarda el icono del carrito del header para añadir una animación de respiración si se agrega el producto al carrito
-        let shoppingCartIcon = document.getElementById('shoppingCartIcon');
+function moveToShoppingCart(productId, isAuth) {
+    // Si no se está autenticado se redirige al formulario de inicio de sesión
+    if (!isAuth) {
+        window.location.href = '/login';
+        return;
+    } else {
+        // Se hace una petición AJAX de tipo POST para enviar al controlador el id del producto que se desea guardar en el carrito
+        fetch(`/products/move-to-cart`, {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': csrfToken,
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            body : JSON.stringify({id: productId})
+        })
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            // Guarda el icono del carrito del header para añadir una animación de respiración si se agrega el producto al carrito
+            let shoppingCartIcon = document.getElementById('shoppingCartIcon');
 
-        if (shoppingCartIcon) {
-            shoppingCartIcon.classList.add('cart-animation');
-    
-            // Quitar la animación después de 5ms
-            setTimeout(() => {
-                shoppingCartIcon.classList.remove('cart-animation');
-            }, 2000);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+            if (shoppingCartIcon) {
+                shoppingCartIcon.classList.add('cart-animation');
+        
+                // Quitar la animación después de 5ms
+                setTimeout(() => {
+                    shoppingCartIcon.classList.remove('cart-animation');
+                }, 2000);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
 }
 
 // Función para eliminar productos del carrito, recibe el id a elimnar

@@ -51,7 +51,7 @@
                             @else
                                 <div class="product-buttons">
                                     <a onclick="buyProducts({{ $product->id }})" class="btn btn-success" style="width: 7rem;">Comprar</a>
-                                    <a onclick="moveToShoppingCart({{ $product->id }})" class="btn btn-primary" style="width: 9rem;">Añadir al Carrito</a>
+                                    <a onclick="moveToShoppingCart({{ $product->id }}, {{ auth()->check() ? 'true' : 'false' }})" class="btn btn-primary" style="width: 9rem;">Añadir al Carrito</a>
                                 </div>
                             @endif
                         @endif
