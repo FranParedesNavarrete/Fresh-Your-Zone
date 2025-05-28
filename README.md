@@ -28,9 +28,9 @@ Queremos agradecer a los sponsors que apoyan el desarrollo de FZY. Si estas inte
 
  ### 2. Instalar las dependencias
  Ejecuta en tu terminal el siguiente comando para instalar composer dentro de la carpeta del proyecto.<br>
- `composer install`<br
+ `composer install`<br>
  Instala <br>
- `npm install && npm run dev`.
+ `npm install && npm run dev`
 
  ### 3. Crear el enlace simbólico
  Ejecuta: <br>
@@ -44,7 +44,7 @@ Queremos agradecer a los sponsors que apoyan el desarrollo de FZY. Si estas inte
 
  ### 6. Arrancar el servidor
  `php artisan serve`<br>
- > .[!NOTE]
+ > [!NOTE]
  > Si utilizas Laragon no hace falta ejecutar el comando, solo inicia el servidor desde la interfaz.
 
 ## Contribuciones
