@@ -23,25 +23,29 @@ Queremos agradecer a los sponsors que apoyan el desarrollo de FZY. Si estas inte
 
 ## Instalación del proyecto
  ### 1. Clonar el repositorio
- Ejecuta en tu terminal el siguiente comando para clonar el repositorio.
+ Ejecuta en tu terminal el siguiente comando para clonar el repositorio.<br>
  `git clone https://github.com/FranParedesNavarrete/Fresh-Your-Zone.git`
 
  ### 2. Instalar las dependencias
- Ejecuta en tu terminal el siguiente comando para instalar composer dentro de la carpeta del proyecto.
- `composer install`
- Instala 
+ Ejecuta en tu terminal el siguiente comando para instalar composer dentro de la carpeta del proyecto.<br>
+ `composer install`<br
+ Instala <br>
  `npm install && npm run dev`.
 
- ### 3. Crear el archivo .env y configurar las credenciales
- Ejecuta `cp .env.example .env` para copiar como `.env` si usas Mac/Unix/Linux.
- Ejecuta `copy .env.example .env` para copiar como `.env` si usas Windows.
+ ### 3. Crear el enlace simbólico
+ Ejecuta: <br>
+ `php artisan storage:link`
 
- ### 4.Ejecutar las migraciones
- php artisan migrate:fresh
+ ### 4. Crear el archivo .env y configurar las credenciales
+ Configura el archivo `.env`
 
- ### 5. Arrancar el servidor
- php artisan serve
- *Si usas Laragon no hace falta ejecutar el comando, solo inicia el servidor desde la interfaz.
+ ### 5.Ejecutar las migraciones
+ `php artisan migrate:fresh`
+
+ ### 6. Arrancar el servidor
+ `php artisan serve`<br>
+ > .[!NOTE]
+ > Si utilizas Laragon no hace falta ejecutar el comando, solo inicia el servidor desde la interfaz.
 
 ## Contribuciones
 Las contribuciones son acptadas, no dudes en enviar tus Pull Requests, abrir issues o sugerir mejoras. 
