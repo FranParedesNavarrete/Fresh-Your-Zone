@@ -23,11 +23,14 @@ Queremos agradecer a los sponsors que apoyan el desarrollo de FZY. Si estas inte
 
 ## Instalación del proyecto
  ### 1. Clonar el repositorio
- Ejecuta `git clone https://github.com/FranParedesNavarrete/Fresh-Your-Zone.git` en tu terminal para clonar el repositorio.
+ Ejecuta en tu terminal el siguiente comando para clonar el repositorio.
+ `git clone https://github.com/FranParedesNavarrete/Fresh-Your-Zone.git`
 
  ### 2. Instalar las dependencias
- Ejecuta `composer install` en tu terminal para instalar composer dentro de la carpeta del proyecto.
- Instala `npm install && npm run dev`.
+ Ejecuta en tu terminal el siguiente comando para instalar composer dentro de la carpeta del proyecto.
+ `composer install`
+ Instala 
+ `npm install && npm run dev`.
 
  ### 3. Crear el archivo .env y configurar las credenciales
  Ejecuta `cp .env.example .env` para copiar como `.env` si usas Mac/Unix/Linux.
