@@ -47,11 +47,11 @@
                             @endif
 
                             @if (auth()->check() && auth()->user()->role == 'seller' && auth()->user()->id == $product->seller_id)
-                                <a class="btn btn-warning" style="width: 7rem;" data-bs-toggle="modal" data-bs-target="#editProductModal">Editar</a>
+                                <a class="btn btn-warning buy-btn" data-bs-toggle="modal" data-bs-target="#editProductModal">Editar</a>
                             @else
                                 <div class="product-buttons">
-                                    <a onclick="buyProducts({{ $product->id }})" class="btn btn-success" style="width: 7rem;">Comprar</a>
-                                    <a onclick="moveToShoppingCart({{ $product->id }}, {{ auth()->check() ? 'true' : 'false' }})" class="btn btn-primary" style="width: 9rem;">Añadir al Carrito</a>
+                                    <a onclick="buyProducts({{ $product->id }})" class="btn btn-success buy-btn">Comprar</a>
+                                    <a onclick="moveToShoppingCart({{ $product->id }}, {{ auth()->check() ? 'true' : 'false' }})" class="btn btn-primary cart-btn">Añadir al Carrito</a>
                                 </div>
                             @endif
                         @endif
@@ -86,7 +86,7 @@
                         <div class="product-review mb-3 border p-3 rounded shadow-sm">
                             <div class="d-flex justify-content-between pb-2">
                                 <div>
-                                    <img class="user-avatar" src="{{ asset('storage/'. ($user->avatar ?? 'avatars/default-avatar-icon.jpg')) }}" alt="Avatar de {{ $user->name }}" style="width: 50px; height: 50px; border-radius: 50%;">
+                                    <img class="user-avatar comment-avatar" src="{{ asset('storage/'. ($user->avatar ?? 'avatars/default-avatar-icon.jpg')) }}" alt="Avatar de {{ $user->name }}">
                                     <strong>{{ ucfirst($user->name) }}</strong> 
                                     <br>
                                 </div>

@@ -3,11 +3,15 @@
         <thead>
             <tr>
                 @foreach ($columns as $column)
-                    <th>{{ ucfirst($column) }}</th>
+                    @if ($column == 'precio') 
+                        <th class="price-row">{{ ucfirst($column) }}</th>
+                    @else
+                        <th>{{ ucfirst($column) }}</th>
+                    @endif
                 @endforeach
             </tr>
         </thead>
-        <tbody class="text-center" style="vertical-align: baseline;">
+        <tbody class="text-center">
             @forelse ($data as $row)
                 <tr>
                     @foreach ($columns as $column)
@@ -16,7 +20,7 @@
                                 <td>{{ \Carbon\Carbon::parse($row->created_at)->format('d/m/Y H:i') ?? '-' }}</td>
                                 @break
                             @case('producto')
-                                <td>{{ $row->product->name ?? $row->name }}</td>
+                                <td class="product-row">{{ $row->product->name ?? $row->name }}</td>
                                 @break
 
                             @case('precio')
@@ -24,7 +28,7 @@
                                 @break
 
                             @case('descripción')
-                                <td>{{ $row->product->description ?? $row->description }}</td>
+                                <td class="product-row">{{ $row->product->description ?? $row->description }}</td>
                                 @break
 
                             @case('estado')

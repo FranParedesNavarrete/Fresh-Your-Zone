@@ -34,8 +34,8 @@
                         @endphp
 
                         <div class="card product-card position-relative">
-                            <div class="position-absolute top-0 end-0 p-2" style="z-index: 10;">
-                                <i id="favorite{{ $product->id }}" class="bi bi-heart{{ $isFavorite ? '-fill text-danger' : '' }} heartDarkmode" onclick="toggleFav(this, {{ $product->id }}, {{ auth()->check() ? 'true' : 'false' }})" title="Botón de favoritos" style="cursor: pointer;"></i>
+                            <div class="position-absolute top-0 end-0 p-2 z-3">
+                                <i id="favorite{{ $product->id }}" class="bi bi-heart{{ $isFavorite ? '-fill text-danger' : '' }} heartDarkmode" onclick="toggleFav(this, {{ $product->id }}, {{ auth()->check() ? 'true' : 'false' }})" title="Botón de favoritos"></i>
                             </div>
 
                             <a href="{{ route('products.show', $product->slug ) }}" class="text-decoration-none text-dark">

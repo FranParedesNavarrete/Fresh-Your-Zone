@@ -90,6 +90,11 @@ main {
     border-radius: 1rem;
 }
 
+.filter-btn{
+    background-color: $color-light-gray !important;
+    border-color: transparent;
+}
+
 .product-buttons {
     display: flex;
     gap: 1rem;
@@ -122,6 +127,25 @@ a {
 
 i {
     cursor: pointer !important;
+}
+
+#mobileSidebar {
+    width: 280px;
+}
+
+.buy-btn {
+    width: 7rem;
+}
+
+.cart-btn {
+    width: 9rem;
+}
+
+.comment-avatar {
+    width: 50px !important; 
+    height: 50px !important; 
+    border-radius: 50% !important;
+    margin-right: 0.5rem !important;
 }
 
 .btn-primary:hover {
@@ -229,6 +253,10 @@ i {
     }
 }
 
+.checkbox-row {
+    width: 1% !important;
+}
+
 #table {
     border-radius: 1rem;
     max-height: 40rem;
@@ -243,6 +271,18 @@ i {
     table {
         margin-bottom: 0;
     }
+
+    tbody {
+        vertical-align: baseline;
+    }
+
+    .product-row {
+        cursor: pointer;
+    }
+}
+
+.price-row {
+    width: 10% !important;
 }
 
 .product-card {
@@ -353,6 +393,14 @@ i {
 
     #table {
         max-height: 27rem;
+
+        .price-row {
+            width: 50% !important;
+        }
+    }
+
+    .order-table {
+        font-size: 0.65rem !important;
     }
 
     .navbar {

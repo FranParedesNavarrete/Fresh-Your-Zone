@@ -11,10 +11,10 @@
                 <table class="table table-striped table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th style="width: 1% !important;"></th>
+                            <th class="checkbox-row"></th>
                             <th>Producto</th>
                             <th>Descripción</th>
-                            <th>Precio</th>
+                            <th class="price-row">Precio</th>
                             <th></th>
                         </tr>
                     </thead>

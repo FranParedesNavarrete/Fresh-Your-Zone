@@ -1,7 +1,7 @@
 <div class="d-flex flex-column">
-  <button class="rounded d-md-block d-md-none text-dark"  data-bs-toggle="collapse" data-bs-target="#mobileSidebar" aria-expanded="false" aria-controls="mobileSidebar" style="background-color: #d4cdc5 !important;">Filtros</button>
+  <button class="rounded d-md-block d-md-none text-dark filter-btn"  data-bs-toggle="collapse" data-bs-target="#mobileSidebar" aria-expanded="false" aria-controls="mobileSidebar">Filtros</button>
 
-  <aside class="p-3 filter-container collapse d-md-block" id="mobileSidebar" style="width: 280px;">
+  <aside class="p-3 filter-container collapse d-md-block" id="mobileSidebar">
     <!-- Boolean Filters -->
     <div class="mb-4">
       <h5 class="fw-bold d-none d-md-block">Filtros</h5>

@@ -8,9 +8,12 @@
             <h2>Resumen del Pedido</h2>
             <p></p>
             <div class="purchase-summary w-100">
-                @component('components.table', ['columns' => ['imagenes', 'producto', 'descripción', 'estado', 'precio'], 'data' => $products])
+                <div class="order-table">
+                    @component('components.table', ['columns' => ['imagenes', 'producto', 'descripción', 'estado', 'precio'], 'data' => $products])
 
-                @endcomponent
+                    @endcomponent
+                </div>
+
                 <div>
                     <h2>Método de Pago</h2>
                     <div class="d-flex flex-column">
