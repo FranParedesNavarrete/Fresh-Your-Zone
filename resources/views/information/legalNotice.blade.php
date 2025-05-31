@@ -5,22 +5,22 @@
 @section('content')
     <div class="container-fluid">
         <div class="container w-75">
-            <h2 class="text-center pb-2">Aviso Legal</h2>
+            <h2 class="text-center pb-2">{{ __('AvisoLegal.') }}</h2>
 
-            <p>En cumplimiento de la Ley de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI), se informa que esta página es propiedad de FYZ.</p>
+            <p>{{ __('AvisoLegalBienvenida.') }}.</p>
 
-            <h5>Datos del titular</h5>
+            <h5>{{ __('DatosTitularTitulo.') }}</h5>
             <p>
-                Nombre: Fresh Your Zone <br>
-                Email de contacto: freshyourzone@gmail.com <br>
-                Domicilio social: Calle Ficticia 123, Valencia, España
+                {{ __('TitularNombre.') }}: Fresh Your Zone <br>
+                {{ __('TitularEmail.') }}: freshyourzone@gmail.com <br>
+                {{ __('TitularDomicilio.') }}: Calle Ficticia 123, Valencia, España
             </p>
 
-            <h5>Propiedad intelectual</h5>
-            <p>Todos los contenidos de esta web, incluyendo textos, imágenes, logotipos y diseños, son propiedad de FYZ o se usan con autorización. Queda prohibida su reproducción total o parcial sin consentimiento.</p>
+            <h5>{{ __('PropiedadIntelectualTitulo.') }}</h5>
+            <p>{{ __('PropiedadIntelectual.') }}</p>
 
-            <h5>Responsabilidad</h5>
-            <p>FYZ no se hace responsable del uso incorrecto de la plataforma ni de los contenidos generados por los usuarios.</p>
+            <h5>{{ __('ResponsabilidadTitulo.') }}</h5>
+            <p>{{ __('Responsabilidad.') }}.</p>
         </div>
     </div>
 @endsection

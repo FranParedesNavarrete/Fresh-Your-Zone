@@ -37,7 +37,7 @@
     </div>
 
     <div class="p-2 m-2 d-flex justify-content-center gap-3">
-        <a class="nav-link" href="{{ url('/change-language/en') }}">English (US)</a>
-        <a class="nav-link" href="{{ url('/change-language/es') }}">Español (ES)</a>
+        <a class="nav-link language" href="{{ url('/change-language/en') }}">English (US)</a>
+        <a class="nav-link language" href="{{ url('/change-language/es') }}">Español (ES)</a>
     </div>
 </footer>

@@ -20,8 +20,52 @@
     "Modificaciones.": "Nos reservamos el derecho de modificar estos términos en cualquier momento. Se notificará a los usuarios a través del sitio web cuando ocurran cambios relevantes",
 
     "PolíticaPriv.": "Política de Privacidad",
+    "PolíticaPrivBienvenida.": "En Fresh Your Zone nos comprometemos a proteger tu privacidad. Esta política explica cómo recopilamos, usamos y protegemos tu información personal",
+
+    "InformaciónRecopiladaTitulo.": "Información recopilada",
+    "InformaciónRecopilada.": "Recolectamos información como nombre, correo electrónico, dirección y preferencias de compra al registrarte o realizar una compra",
+
+    "UsoInformacionTitulo.": "Uso de la información",
+    "UsoInformacion.": "Utilizamos tus datos para mejorar tu experiencia, gestionar pedidos, prevenir fraudes y enviarte comunicaciones relevantes. No compartimos tu información con terceros sin tu consentimiento explícito",
+
+    "CookiesTitulo.": "Cookies",
+    "Cookies.": "Utilizamos cookies para recordar tus preferencias y ofrecerte una experiencia personalizada. Puedes modificar estas configuraciones en tu navegador",
+
+    "SeguridadTitulo.": "Seguridad",
+    "Seguridad.": "Implementamos medidas técnicas y organizativas para proteger tus datos personales del acceso no autorizado, alteración o pérdida",
+
     "PolíticaCookies.": "Política de Cookies",
+    "PolíticaCookiesBienvenida.": "Esta página describe cómo FYZ utiliza cookies para mejorar tu experiencia de usuario",
+
+    "QueSonCookiesTitulo.": "Qué son las cookies",
+    "QueSonCookies.": "Las cookies son pequeños archivos que se almacenan en tu dispositivo cuando visitas un sitio web. Nos ayudan a entender mejor tu comportamiento en nuestra plataforma",
+
+    "TiposCookiesTitulo.": "Tipos de cookies que utilizamos",
+    "TiposCookiesEsencialTitulo.": "Cookies Esenciales",
+    "TiposCookiesEsencial.": "necesarias para el funcionamiento del sitio",
+
+    "TiposCookiesRendimientoTitulo.": "Cookies de Rendimiento",
+    "TiposCookiesRendimiento.": "recogen información anónima sobre cómo usas nuestra web",
+
+    "TiposCookiesPersonalizacionTitulo.": "Cookies de personalización",
+    "TiposCookiesPersonalizacion.": "recuerdan tus preferencias para ofrecerte contenido adaptado",
+
+    "GestionCookiesTitulo.": "Gestión de cookies",
+    "GestionCookies.": "Puedes aceptar, rechazar o configurar las cookies desde tu navegador. Ten en cuenta que algunas funcionalidades podrían no funcionar correctamente si las desactivas",
+
     "AvisoLegal.": "Aviso Legal",
+    "AvisoLegalBienvenida.": "En cumplimiento de la Ley de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI), se informa que esta página es propiedad de FYZ",
+
+    "DatosTitularTitulo.": "Datos del titular",
+    "TitularNombre.": "Nombre",
+    "TitularEmail.": "Email de contacto",
+    "TitularDomicilio.": "Domicilio Social",
+
+    "PropiedadIntelectualTitulo.": "Propiedad intelectual",
+    "PropiedadIntelectual.": "Todos los contenidos de esta web, incluyendo textos, imágenes, logotipos y diseños, son propiedad de FYZ o se usan con autorización. Queda prohibida su reproducción total o parcial sin consentimiento",
+
+    "ResponsabilidadTitulo.": "Responsabilidad",
+    "Responsabilidad.": "FYZ no se hace responsable del uso incorrecto de la plataforma ni de los contenidos generados por los usuarios",
 
     "Contacto.": "Contacto",
     "SobreNosotros.": "Sobre Nosotros",

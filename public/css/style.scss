@@ -347,8 +347,8 @@ i {
     display: inline-block; 
 }
 
+// CSS para el header en formato ordenador
 @media (min-width: 990px) {
-    // CSS para el header en formato ordenador
     #navHeader {
         display: flex;
         justify-content: space-between;
