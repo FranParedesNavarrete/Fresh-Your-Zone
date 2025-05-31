@@ -17,10 +17,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->remove(TrimStrings::class);
         $middleware->remove(ConvertEmptyStringsToNull::class);
         $middleware->group('web', [
-            // Asegúrate de poner esto primero
-            \Illuminate\Session\Middleware\StartSession::class,
-    
-            // Luego tu middleware
+            \Illuminate\Session\Middleware\StartSession::class, // Iniciar la session antes 
             \App\Http\Middleware\Translations::class,
         ]);
     })
