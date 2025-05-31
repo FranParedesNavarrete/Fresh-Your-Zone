@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class UserController extends Controller
 {
@@ -291,5 +292,11 @@ class UserController extends Controller
         $user->save();
 
         return response()->json(['success' => true, 'message' => 'Rol cambiado correctamente.']);
+    }
+
+    public function changeLanguage($language) 
+    {
+        session(['language' => $language]);
+        return redirect()->back();
     }
 }

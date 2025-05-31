@@ -23,6 +23,7 @@ class OrderObserver
             $notification->date = now();
             $notification->subject = 'Nuevo pedido de tu producto ' . $order->product->name . '.';
             $notification->type = 'transacción';
+            $notification->state = 'pending';
             $notification->save();
 
             // Notificación para el comprador
@@ -31,6 +32,7 @@ class OrderObserver
             $notification->date = now();
             $notification->subject = 'Gracias por tu compra. En breves recibirás una notificación con el estado de tu pedido.';
             $notification->type = 'transacción';
+            $notification->state = 'pending';
             $notification->save();
 
             // Cambia el stock del producto
@@ -58,6 +60,7 @@ class OrderObserver
                 $notification->date = now();
                 $notification->subject = 'Tu producto '. $order->product->name .' ha sido ' . $mensaje . '.';
                 $notification->type = 'transacción';
+                $notification->state = 'pending';
                 $notification->save();
             }
 
@@ -73,6 +76,7 @@ class OrderObserver
                 $notification->date = now();
                 $notification->subject = 'Gracias por tu compra. En breves recibirás una notificación con el estado de tu pedido.';
                 $notification->type = 'transacción';
+                $notification->state = 'pending';
                 $notification->save();
             } else {
                 // Se crea la notifiación para el comprador en caso de que el estado sea 'entregado' o cualquier otro estado diferente a 'carrito' o 'pedido'
@@ -81,6 +85,7 @@ class OrderObserver
                 $notification->date = now();
                 $notification->subject = 'Tu pedido '. $order->product->name. ' ha cambiado de estado a "' . $order->status . '".';
                 $notification->type = 'transacción';
+                $notification->state = 'pending';
                 $notification->save();
             }
         }

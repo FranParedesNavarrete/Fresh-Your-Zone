@@ -14,7 +14,6 @@ html, body {
 .logo-fzy {
     width: 5rem;
 }
-
  
 .dropdown-item:hover {
     background-color: $color-light-gray !important;
@@ -78,6 +77,10 @@ main {
     border-bottom: 3px solid #fff;
 }
 
+.section-footer:hover {
+    border-bottom: 1px solid $color-dark-deep-blue;
+}
+
 .user-info {
     display: flex;
     justify-content: space-between;
@@ -139,6 +142,10 @@ i {
 
 .cart-btn {
     width: 9rem;
+}
+
+.count-icon {
+    font-size: 0.6rem;
 }
 
 .comment-avatar {
@@ -208,6 +215,14 @@ i {
     .card {
         border-color: $color-light-gray !important;
     }
+
+    .favoriteBtn {
+        color: $color-cream !important;
+    }
+
+    .language:hover {
+        border-bottom: 1px solid $color-cream;
+    }
 }
 
 /* Tema claro */
@@ -229,6 +244,10 @@ i {
     #table {
         border: 1px solid $color-light-gray !important;
     }
+
+    .language:hover {
+        border-bottom: 1px solid $color-dark-deep-blue;
+    }
 }
 
 .product-info {
@@ -247,10 +266,6 @@ i {
     display: flex;
     gap: 3rem;
     justify-content: space-between;
-
-    #table {
-        height: 100% !important;
-    }
 }
 
 .checkbox-row {
@@ -385,6 +400,7 @@ i {
     #navHeader {
         ul.navbar-nav {
             width: 100%;
+            font-size: 1.2rem;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -410,6 +426,7 @@ i {
 
     .category-navbar {
         font-weight: 550 !important;
+        font-size: 0.85rem;
         padding-inline: 0.1rem;
     }
 

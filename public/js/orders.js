@@ -178,8 +178,13 @@ function toggleAddressDeliveryPoint() {
         }
     }
 
-    addressRadio.addEventListener('change', toggleSections);
-    deliveryPointRadio.addEventListener('change', toggleSections);
+    if (addressRadio) {
+        addressRadio.addEventListener('change', toggleSections);
+    }
+
+    if (deliveryPointRadio) {
+        deliveryPointRadio.addEventListener('change', toggleSections);
+    }
 }
 
 // Función para comprobar el número de teléfono, si no existe lo pone el input en rojo y si se introduce un número correcto lo guarda en la base de datos y pone el input en verde
@@ -188,7 +193,7 @@ function checkPhoneNumber() {
     let phoneInput = document.getElementById('phone_number');
 
     // Si no hay un número de teléfono guardado en la base de datos se pone rojo el input
-    if (!phoneText) {
+    if (!phoneText && phoneInput) {
         phoneInput.style.borderColor = 'red';
         phoneInput.style.borderWidth = '2px';
         phoneInput.style.borderStyle = 'solid';
@@ -240,7 +245,7 @@ function checkAddress() {
     let addressInput = document.getElementById('address');
 
     // Si se selecciona la opción de dirección y no hay una dirección guardada en la base de datos pone el input de color rojo
-    if (adressSelected.checked) {
+    if (adressSelected && adressSelected.checked) {
         if (addressInput.value == '') {
             addressInput.style.borderColor = 'red';
             addressInput.style.borderWidth = '2px';
@@ -286,38 +291,39 @@ function checkAddress() {
 
 // Función para actualizar el estado de un pedido
 function updateOrderStatus(order) {
-    let orderStatus = document.getElementById(order.id);
+    if (order) {
+        let orderStatus = document.getElementById(order.id);
 
-    // Se hace una petición AJAX de tipo POST para enviar al controlador el nuevo estado del pedido y el id de este
-    fetch('/admin/orders/update-status', {
-        method: 'POST',
-        headers: {
-            'X-CSRF-TOKEN': csrfToken,
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-        },
-        body: JSON.stringify({
-            status: orderStatus.value,
-            order_id: order.id
+        // Se hace una petición AJAX de tipo POST para enviar al controlador el nuevo estado del pedido y el id de este
+        fetch('/admin/orders/update-status', {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': csrfToken,
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            body: JSON.stringify({
+                status: orderStatus.value,
+                order_id: order.id
+            })
         })
-    })
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        // Si se completa la actualización de estado pone de color ver el select, si no se ha podido completar se pone rojo
-        if (data.success) {
-            order.style.borderColor = 'green';
-            order.style.borderWidth = '2px';
-            order.style.borderStyle = 'solid';
-        } else {
-            order.style.borderColor = 'red';
-            order.style.borderWidth = '2px';
-            order.style.borderStyle = 'solid';
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            // Si se completa la actualización de estado pone de color ver el select, si no se ha podido completar se pone rojo
+            if (data.success) {
+                order.style.borderColor = 'green';
+                order.style.borderWidth = '2px';
+                order.style.borderStyle = 'solid';
+            } else {
+                order.style.borderColor = 'red';
+                order.style.borderWidth = '2px';
+                order.style.borderStyle = 'solid';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
 }

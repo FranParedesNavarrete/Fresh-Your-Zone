@@ -9,7 +9,7 @@
                 <a class="nav-link list-group-item list-group-item-action {{ Str::endsWith(url()->current(), 'profile') ? 'active' : '' }}" href="/profile">Perfil</a>
                 <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'notifications') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/notifications">Notificaciones</a>
                 <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'favorites') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/favorites">Favoritos</a>
-                <a class="nav-link list-group-item list-group-item-action {{ Str::endsWith(url()->current(), '/history') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/history">Historial</a>
+                <a class="nav-link list-group-item list-group-item-action {{ Str::endsWith(url()->current(), '/history') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/history">Pedidos</a>
                 @if(Auth::user()->role == 'seller')
                     <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'manage-products') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/seller/manage-products">Gestionar Productos</a>
                     <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'sales-history') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/seller/sales-history">Historial de Ventas</a>

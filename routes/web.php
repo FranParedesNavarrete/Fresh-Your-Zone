@@ -68,11 +68,14 @@ Route::post('/orders/store', [OrderController::class, 'store'])->name('orders.st
 Route::get('/orders/success', [OrderController::class, 'success'])->name('orders.success')->middleware('auth');
 
 // Rutas de información
-Route::get('about-us', [InformationController::class, 'aboutUs'])->name('about.us');
-Route::get('information/terms-conditions', [InformationController::class, 'termsAndConditions'])->name('information.terms.conditions');
-Route::get('information/privacy-policy', [InformationController::class, 'privacyPolicy'])->name('information.privacy-policy');
-Route::get('information/cookies-policy', [InformationController::class, 'cookiesPolicy'])->name('information.cookies.policy');
-Route::get('information/legal-policy', [InformationController::class, 'legalNotice'])->name('information.legal.policy');
+Route::get('/about-us', [InformationController::class, 'aboutUs'])->name('about.us');
+Route::get('/information/terms-conditions', [InformationController::class, 'termsAndConditions'])->name('information.terms.conditions');
+Route::get('/information/privacy-policy', [InformationController::class, 'privacyPolicy'])->name('information.privacy-policy');
+Route::get('/information/cookies-policy', [InformationController::class, 'cookiesPolicy'])->name('information.cookies.policy');
+Route::get('/information/legal-policy', [InformationController::class, 'legalNotice'])->name('information.legal.policy');
+
+// Rutas de idioma
+Route::get('/change-language/{language}', [UserController::class, 'changeLanguage'])->name('change.language');
 
 // Ruta de inicio
 Route::get('/', [ProductController::class, 'homeProducts'])->name('index');

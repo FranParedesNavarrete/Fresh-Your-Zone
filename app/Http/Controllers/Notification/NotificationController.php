@@ -23,7 +23,10 @@ class NotificationController extends Controller
             return redirect()->route('login')->with('error', 'Debes iniciar sesión para ver tus notificaciones.');
         }
 
-        $notifications = Notification::where('user_id', $userID)->orderBy('updated_at', 'desc')->get(); // Obtiene las notificaciones del usuario
+        Notification::where('user_id', $userID)->update(['state' => 'read']);
+        session(['notificationsCount' => 0]);
+
+        $notifications = Notification::where('user_id', $userID)->orderBy('date', 'desc')->get(); // Obtiene las notificaciones del usuario
 
         return view('notifications.index', compact('notifications'));
     }

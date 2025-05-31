@@ -1,10 +1,16 @@
 // Archivo JS principal de la aplicación, este archivo contiene las funciones generales
-
+localStorage.removeItem('favs'); // Reestablecer el localStorage
 let csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content'); // Guardar el CSRF Token para las peticiones
 let localFavs = JSON.parse(localStorage.getItem('favs')) || []; // Guardar los favoritos del localStorage en caso de que hayan
 let favs = Array.from(new Set([...localFavs, ...(window.favoritesFromServer || [])])); // Guardar los favoritos que se reciben de la base de datos si los hay
 localStorage.setItem('favs', JSON.stringify(favs)); // Guardar los favoritos en el localStorage
 
+let favoritesCount = window.favoritesCount;
+let favoritesCountZone = document.getElementById('favoritesCount');
+
+if (favoritesCountZone) {
+    favoritesCountZone.innerHTML = favoritesCount;
+}
 
  // Funcion para que la ventana se refresque cada 10s
  function refreshWindow() {
@@ -15,8 +21,6 @@ localStorage.setItem('favs', JSON.stringify(favs)); // Guardar los favoritos en 
 
 // Evento principal que llama a las funciones al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
-    //refreshWindow();
-
     changeDarkmodeClass();
 
     showTotalPrice();
@@ -138,7 +142,8 @@ function addFavorite(productId, icon) {
         localStorage.setItem('favs', JSON.stringify(favs));
         updateFavIcon(icon, true);
 
-        document.getElementById('favoriteBtn').classList.add('cart-animation');
+        document.getElementById('favoriteBtn').classList.remove('bi-heart');
+        document.getElementById('favoriteBtn').classList.add('bi-heart-fill', 'text-danger', 'cart-animation');
     
         // Quitar la animación después de 5ms
         setTimeout(() => {
@@ -174,6 +179,13 @@ function deleteFavorite(productId, icon) {
         favs = favs.filter(id => id !== productId);
         localStorage.setItem('favs', JSON.stringify(favs));
         updateFavIcon(icon, false);
+
+        console.log(favs.length);
+        if (favs.length == 0) {
+            document.getElementById('favoriteBtn').classList.remove('bi-heart-fill', 'text-danger');
+            document.getElementById('favoriteBtn').classList.add('bi-heart');
+        }
+
         console.log('Favorito eliminado');
     })
     .catch(error => {

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Product;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Order;
+use App\Models\Notification;
 use App\Http\Requests\ProductRequest;
 
 use Illuminate\Http\Request;
@@ -237,10 +238,25 @@ class ProductController extends Controller
 
         // Si el usuario está autenticado, obtiene sus favoritos
         if(Auth::check()) {
+            $userId = auth()->user()->id;
+
             $favorites = DB::table('favorites')
-            ->where('user_id', auth()->user()->id)
+            ->where('user_id', $userId)
             ->pluck('product_id')
             ->toArray();
+
+            $notificationsCount = Notification::where('user_id', $userId)
+            ->where('state', 'pending')
+            ->count();
+
+            $cartProductsCount = Order::where('buyer_id', $userId)
+            ->where('status', 'carrito')
+            ->count();
+
+            session(['favoritesCount' => count($favorites)]);
+            session(['notificationsCount' => $notificationsCount]);
+            session(['cartProductsCount' => $cartProductsCount]);
+
         }
 
         $rawType = DB::selectOne("SHOW COLUMNS FROM products WHERE Field = 'category'")->Type; // Extraer todas las categorías de la tabla
@@ -256,7 +272,7 @@ class ProductController extends Controller
         }
 
         $allCategories = collect($categories);
-        $categories = $allCategories->shuffle()->take(4); // Solo coger 4 categorias aleatorias para el encabezado
+        $categories = $allCategories->shuffle()->take(3); // Solo coger 4 categorias aleatorias para el encabezado
         $categoriesIndex = $allCategories->diff($categories)->shuffle()->take(4); // Coge el resto de categorias para mostrar diferentes productos en la página de inicio
 
         return view('index', compact('products', 'categories', 'favorites', 'categoriesIndex'));

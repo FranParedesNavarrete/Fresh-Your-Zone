@@ -70,6 +70,10 @@ main {
   border-bottom: 3px solid #fff;
 }
 
+.section-footer:hover {
+  border-bottom: 1px solid #262525;
+}
+
 .user-info {
   display: flex;
   justify-content: space-between;
@@ -133,6 +137,10 @@ i {
   width: 9rem;
 }
 
+.count-icon {
+  font-size: 0.6rem;
+}
+
 .comment-avatar {
   width: 50px !important;
   height: 50px !important;
@@ -193,6 +201,12 @@ i {
 .darkmode .card {
   border-color: #d4cdc5 !important;
 }
+.darkmode .favoriteBtn {
+  color: #f4f4f2 !important;
+}
+.darkmode .language:hover {
+  border-bottom: 1px solid #f4f4f2;
+}
 
 /* Tema claro */
 .lightmode {
@@ -211,6 +225,9 @@ i {
 .lightmode #table {
   border: 1px solid #d4cdc5 !important;
 }
+.lightmode .language:hover {
+  border-bottom: 1px solid #262525;
+}
 
 .product-info {
   display: flex;
@@ -228,9 +245,6 @@ i {
   display: flex;
   gap: 3rem;
   justify-content: space-between;
-}
-.purchase-summary #table {
-  height: 100% !important;
 }
 
 .checkbox-row {
@@ -351,6 +365,7 @@ i {
 @media (max-width: 995px) {
   #navHeader ul.navbar-nav {
     width: 100%;
+    font-size: 1.2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -370,6 +385,7 @@ i {
   }
   .category-navbar {
     font-weight: 550 !important;
+    font-size: 0.85rem;
     padding-inline: 0.1rem;
   }
   .product-image {

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->datetime('date');
             $table->string('subject', 255);
             $table->enum('type', ['admin', 'transacción']);
+            $table->enum('state', ['pending', 'read'])->default('pending');
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

@@ -8,6 +8,8 @@
             @foreach($categories as $category)
                 <a class="text-dark category-navbar" href="/products?category={{ $category }}">{{ ucfirst($category) }}</a>
             @endforeach
+
+            <a class="text-dark category-navbar" href="/products">Todas las categorias</a>
         </div>
     </div>
 
@@ -65,5 +67,6 @@
 
     <script>
         window.favoritesFromServer = @json($favorites ?? []);
+        window.favoritesCount = {{ session('favoritesCount') ?? 0 }};
     </script>
 @endsection
