@@ -1,5 +1,22 @@
 {
+    "_comment": "Traducciones de footer",
     "Información.": "Información",
+    "Términos.": "Términos y Condiciones",
+    "PolíticaPriv.": "Política de Privacidad",
+    "PolíticaCookies.": "Política de Cookies",
+    "AvisoLegal.": "Aviso Legal",
+
     "Contacto.": "Contacto",
-    "Navegación": "Navegación"
+    "SobreNosotros.": "Sobre Nosotros",
+    "Teléfono.": "Teléfono",
+    "Dirección": "Dirección",
+
+    "Navegación.": "Navegación",
+    "Inicio.": "Inicio",
+    "Productos.": "Productos",
+    "Favoritos.": "Favoritos",
+    "Notificaciones.": "Notificaciones",
+    "Perfil.": "Perfil",
+
+    "DerechosReservados.": "Todos los derechos reservados"
 }
