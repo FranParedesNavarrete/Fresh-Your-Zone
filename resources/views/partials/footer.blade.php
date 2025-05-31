@@ -37,7 +37,6 @@
     </div>
 
     <div class="p-2 m-2 d-flex justify-content-center gap-3">
-        {{ session('language') }}
         <a class="nav-link" href="{{ url('/change-language/en') }}">English (US)</a>
         <a class="nav-link" href="{{ url('/change-language/es') }}">Español (ES)</a>
     </div>

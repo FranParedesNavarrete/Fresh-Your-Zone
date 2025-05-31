@@ -2,6 +2,23 @@
         "_comment": "Traducciones de footer",
         "Información.": "Information",
         "Términos.": "Terms and Conditions",
+        "TérminosBienvenido.": "Welcome to Fresh Your Zone (FYZ). By accessing or using our platform, you agree to be bound by the following terms and conditions of use. If you do not agree with them, please do not use our services",
+        
+        "UsoDelSitioTitulo.": "Use of the Site",
+        "UsoDelSitio.": "The user agrees to use this platform solely for legal purposes and in accordance with the provisions of this document Any fraudulent or unlawful use will result in immediate expulsion",
+    
+        "RegistroDeUsuariosTitulo.": "User Registration",
+        "RegistroDeUsuarios.": "To buy or sell clothing on FYZ it is necessary to register The user agrees to provide truthful information and keep it updated Creating multiple accounts or impersonating others is not allowed",
+    
+        "PublicacionDeProductosTitulo.": "Product Publication",
+        "PublicacionDeProductos.": "Sellers must ensure that the products published are legal and properly described FYZ reserves the right to remove products that violate these rules",
+    
+        "LimitacionDeResponsabilidadTitulo.": "Limitation of Liability",
+        "LimitacionDeResponsabilidad.": "FYZ is not responsible for content uploaded by users or for transactions made outside the platform",
+    
+        "ModificacionesTitulo.": "Modifications",
+        "Modificaciones.": "We reserve the right to modify these terms at any time Users will be notified through the website when relevant changes occur",
+
         "PolíticaPriv.": "Privacy Policy",
         "PolíticaCookies.": "Cookies Policy",
         "AvisoLegal.": "Legal Notice",
