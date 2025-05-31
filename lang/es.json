@@ -37,7 +37,7 @@
     "PolíticaCookies.": "Política de Cookies",
     "PolíticaCookiesBienvenida.": "Esta página describe cómo FYZ utiliza cookies para mejorar tu experiencia de usuario",
 
-    "QueSonCookiesTitulo.": "Qué son las cookies",
+    "QueSonCookiesTitulo.": "¿Qué son las cookies?",
     "QueSonCookies.": "Las cookies son pequeños archivos que se almacenan en tu dispositivo cuando visitas un sitio web. Nos ayudan a entender mejor tu comportamiento en nuestra plataforma",
 
     "TiposCookiesTitulo.": "Tipos de cookies que utilizamos",
@@ -69,6 +69,12 @@
 
     "Contacto.": "Contacto",
     "SobreNosotros.": "Sobre Nosotros",
+    "SobreNosotrosDescripcion.": "Fresh Your Zone (FYZ) nace con la misión de ofrecer un espacio digital moderno, seguro y sostenible para la compraventa de ropa. Nuestra plataforma conecta a compradores y vendedores de toda España para dar una segunda vida a las prendas",
+    
+    "SobreNosotrosValores.": "Creemos en la economía circular y en el poder de la moda como herramienta de expresión, sin renunciar a la responsabilidad ambiental. FYZ pone en tus manos la posibilidad de renovar tu armario de forma consciente y colaborar en una comunidad de usuarios comprometidos",
+
+    "SobreNosotrosTecnologia.": "Desarrollada con Laravel, FYZ ofrece un entorno funcional, seguro y atractivo, pensado para facilitar la experiencia del usuario. ¡Únete a la revolución del estilo sostenible!",
+
     "Teléfono.": "Teléfono",
     "Dirección": "Dirección",
 

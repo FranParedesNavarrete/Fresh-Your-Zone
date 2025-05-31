@@ -9,7 +9,7 @@
 
             <p class="text-center">{{ __('PolíticaCookiesBienvenida.') }}.</p>
 
-            <h5>1. ¿{{ __('QueSonCookiesTitulo.') }}?</h5>
+            <h5>1. {{ __('QueSonCookiesTitulo.') }}</h5>
             <p>{{ __('QueSonCookies.') }}.</p>
 
             <h5>2. {{ __('TiposCookiesTitulo.') }}</h5>
