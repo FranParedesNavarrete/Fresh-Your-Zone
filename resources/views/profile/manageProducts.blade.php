@@ -13,34 +13,36 @@
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newProductModal">Nuevo Producto</button>
                 </div>
                 <p></p>
-                <div class="table-responsive" id="table">
-                    <table class="table table-striped table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <th>Producto</th>
-                                <th>Descripción</th>
-                                <th>Precio</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @forelse ($products as $product)
-                                <tr row-id="{{ $product->id }}">
-                                    <td onclick="window.location='/products/{{ $product->slug }}'">{{ $product->name }}</td>
-                                    <td onclick="window.location='/products/{{ $product->slug }}'">{{ $product->description }}</td>
-                                    <td onclick="window.location='/products/{{ $product->slug }}'">{{ $product->price }} €</td>
-                                    <td class="text-center">
-                                        <i class="bi bi-pencil-fill text-warning" data-bs-toggle="modal" data-bs-target="#editProductModal{{ $product->slug }}" title="Editar producto"></id>
-                                        <i class="bi bi-x-lg text-danger" data-bs-toggle="modal" data-bs-target="#deleteProductModal{{ $product->slug }}" title="Eliminar producto"></i>
-                                    </td>
-                                </tr>
-                            @empty
+                <div class="profile-mobile-table">
+                    <div class="table-responsive" id="table">
+                        <table class="table table-striped table-bordered table-hover">
+                            <thead>
                                 <tr>
-                                    <td colspan="4" class="text-center">No tienes porductos disponibles.</td>
+                                    <th>Producto</th>
+                                    <th>Descripción</th>
+                                    <th>Precio</th>
+                                    <th></th>
                                 </tr>
-                            @endforelse
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @forelse ($products as $product)
+                                    <tr row-id="{{ $product->id }}">
+                                        <td onclick="window.location='/products/{{ $product->slug }}'">{{ $product->name }}</td>
+                                        <td onclick="window.location='/products/{{ $product->slug }}'">{{ $product->description }}</td>
+                                        <td class="price-row" onclick="window.location='/products/{{ $product->slug }}'">{{ $product->price }} €</td>
+                                        <td class="text-center">
+                                            <i class="bi bi-pencil-fill text-warning" data-bs-toggle="modal" data-bs-target="#editProductModal{{ $product->slug }}" title="Editar producto"></id>
+                                            <i class="bi bi-x-lg text-danger" data-bs-toggle="modal" data-bs-target="#deleteProductModal{{ $product->slug }}" title="Eliminar producto"></i>
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="4" class="text-center">No tienes porductos disponibles.</td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

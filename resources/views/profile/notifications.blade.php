@@ -7,12 +7,14 @@
         <div class="profile-list-filter">
             @include('partials.sidebar')
             <br>
-            <div class="container">
-                <h2>Notificaciones</h2>
-                <p></p>
-                @component('components.table', ['columns' => ['fecha', 'tipo', 'contenido'], 'data' => $notifications])
+            <div class="profile-mobile-table">
+                <div class="container">
+                    <h2>Notificaciones</h2>
+                    <p></p>
+                    @component('components.table', ['columns' => ['fecha', 'tipo', 'contenido'], 'data' => $notifications])
 
-                @endcomponent
+                    @endcomponent
+                </div>
             </div>
         </div>
     </div>

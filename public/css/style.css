@@ -378,10 +378,13 @@ i {
     max-height: 27rem;
   }
   #table .price-row {
-    width: 50% !important;
+    width: 25% !important;
   }
   .order-table {
     font-size: 0.65rem !important;
+  }
+  .profile-mobile-table {
+    font-size: 0.9rem !important;
   }
   .navbar {
     display: flex;

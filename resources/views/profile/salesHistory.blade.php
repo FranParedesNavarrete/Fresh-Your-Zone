@@ -7,12 +7,14 @@
         <div class="profile-list-filter">
             @include('partials.sidebar')
             <br>
-            <div class="container">
-                <h2>Historial de Ventas</h2>
-                <p></p>
-                @component('components.table', ['columns' => ['fecha', 'producto', 'precio', 'estado'], 'data' => $sales])
+            <div class="profile-mobile-table">
+                <div class="container">
+                    <h2>Historial de Ventas</h2>
+                    <p></p>
+                    @component('components.table', ['columns' => ['fecha', 'producto', 'precio', 'estado'], 'data' => $sales])
 
-                @endcomponent
+                    @endcomponent
+                </div>
             </div>
         </div>
     </div>
