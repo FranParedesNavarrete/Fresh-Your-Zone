@@ -9,7 +9,7 @@
                 <a class="text-dark category-navbar" href="/products?category={{ $category }}">{{ ucfirst($category) }}</a>
             @endforeach
 
-            <a class="text-dark category-navbar" href="/products">Todas las categorias</a>
+            <a class="text-dark category-navbar" href="/products">{{ __('TodasCategorias.') }}</a>
         </div>
     </div>
 
