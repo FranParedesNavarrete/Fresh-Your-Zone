@@ -1,4 +1,28 @@
 {
+    "_comment": "Traducciones del header",
+    "TodasCategorias.": "Todas las Categorías",
+    "accesorios": "accesorios",
+    "calzado": "calzado",
+    "deporte": "deporte",
+    "formal": "formal",
+    "casual": "casual",
+    "invierno": "invierno",
+    "verano": "verano",
+    "abrigo": "abrigo",
+    "camisetas": "camisetas",
+    "pantalones": "pantalones",
+
+    "VerPerfil.": "Ver Perfil",
+    "PanelAdmin.": "Panel de Administración",
+    "CerrarSesión.": "Cerrar Sesión",
+    "IniciarSesión.": "Iniciar Sesión",
+    "CrearCuenta.": "Crear Cuenta",
+
+    "NoProductos.": "No hay productos disponibles",
+    "Hazte.": "Hazte",
+    "Vendedor.": " vendedor ",
+    "RompeHielo.": "y rompe el hielo",
+
     "_comment": "Traducciones de footer",
     "Información.": "Información",
     "Términos.": "Términos y Condiciones",

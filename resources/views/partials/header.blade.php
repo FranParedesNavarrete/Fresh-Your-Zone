@@ -39,16 +39,16 @@
                             <a class="nav-link dropdown-toggle pb-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill" title="Imagen de usuario default"></i></a>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 @if (Auth::user()) 
-                                    <li><a class="dropdown-item" href="/profile">Ver perfil</a></li>
+                                    <li><a class="dropdown-item" href="/profile">{{ __('VerPerfil.') }}</a></li>
                                     @if (Auth::user()->role == 'admin')
-                                        <li><a class="dropdown-item" href="/admin">Panel de administración</a></li>
+                                        <li><a class="dropdown-item" href="/admin">{{ __('PanelAdmin.') }}</a></li>
                                     @endif
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="/logout">Cerrar sesión</a></li>
+                                    <li><a class="dropdown-item" href="/logout">{{ __('CerrarSesión.') }}</a></li>
                                 @else
-                                    <li><a class="dropdown-item" href="/login">Iniciar sesión</a></li>
+                                    <li><a class="dropdown-item" href="/login">{{ __('IniciarSesión.') }}</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="/register">Crear cuenta</a></li>
+                                    <li><a class="dropdown-item" href="/register">{{ __('CrearCuenta.') }}</a></li>
                                 @endif
                             </ul>
                         </li>

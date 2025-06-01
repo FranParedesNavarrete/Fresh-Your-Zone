@@ -1,89 +1,114 @@
-    {
-        "_comment": "Traducciones de footer",
-        "Información.": "Information",
-        "Términos.": "Terms and Conditions",
-        "TérminosBienvenido.": "Welcome to Fresh Your Zone (FYZ). By accessing or using our platform, you agree to be bound by the following terms and conditions of use. If you do not agree with them, please do not use our services",
-        
-        "UsoDelSitioTitulo.": "Use of the Site",
-        "UsoDelSitio.": "The user agrees to use this platform solely for legal purposes and in accordance with the provisions of this document Any fraudulent or unlawful use will result in immediate expulsion",
+{
+    "_comment": "Traducciones del header",
+    "TodasCategorias.": "All Categories",
+    "accesorios": "accessories",
+    "calzado": "footwear",
+    "deporte": "sports",
+    "formal": "formal",
+    "casual": "casual",
+    "invierno": "winter",
+    "verano": "summer",
+    "abrigo": "coat",
+    "camisetas": "t-shirts",
+    "pantalones": "pants",
+
+    "VerPerfil.": "View Profile",
+    "PanelAdmin.": "Admin Panel",
+    "CerrarSesión.": "Log Out",
+    "IniciarSesión.": "Log In",
+    "CrearCuenta.": "Sign In",
+
+
+    "NoProductos.": "No products available",
+    "Hazte.": "Become a",
+    "Vendedor.": " vendor ",
+    "RompeHielo.": "and break the ice",
+
+    "_comment": "Traducciones de footer",
+    "Información.": "Information",
+    "Términos.": "Terms and Conditions",
+    "TérminosBienvenido.": "Welcome to Fresh Your Zone (FYZ). By accessing or using our platform, you agree to be bound by the following terms and conditions of use. If you do not agree with them, please do not use our services",
     
-        "RegistroDeUsuariosTitulo.": "User Registration",
-        "RegistroDeUsuarios.": "To buy or sell clothing on FYZ it is necessary to register The user agrees to provide truthful information and keep it updated Creating multiple accounts or impersonating others is not allowed",
-    
-        "PublicacionDeProductosTitulo.": "Product Publication",
-        "PublicacionDeProductos.": "Sellers must ensure that the products published are legal and properly described FYZ reserves the right to remove products that violate these rules",
-    
-        "LimitacionDeResponsabilidadTitulo.": "Limitation of Liability",
-        "LimitacionDeResponsabilidad.": "FYZ is not responsible for content uploaded by users or for transactions made outside the platform",
-    
-        "ModificacionesTitulo.": "Modifications",
-        "Modificaciones.": "We reserve the right to modify these terms at any time Users will be notified through the website when relevant changes occur",
+    "UsoDelSitioTitulo.": "Use of the Site",
+    "UsoDelSitio.": "The user agrees to use this platform solely for legal purposes and in accordance with the provisions of this document Any fraudulent or unlawful use will result in immediate expulsion",
 
-        "PolíticaPriv.": "Privacy Policy",
-        "PolíticaPrivBienvenida.": "At Fresh Your Zone we are committed to protecting your privacy This policy explains how we collect use and protect your personal information",
+    "RegistroDeUsuariosTitulo.": "User Registration",
+    "RegistroDeUsuarios.": "To buy or sell clothing on FYZ it is necessary to register The user agrees to provide truthful information and keep it updated Creating multiple accounts or impersonating others is not allowed",
 
-        "InformaciónRecopiladaTitulo.": "Information Collected",
-        "InformaciónRecopilada.": "We collect information such as name email address shipping address and purchase preferences when you register or make a purchase",
+    "PublicacionDeProductosTitulo.": "Product Publication",
+    "PublicacionDeProductos.": "Sellers must ensure that the products published are legal and properly described FYZ reserves the right to remove products that violate these rules",
 
-        "UsoInformacionTitulo.": "Use of Information",
-        "UsoInformacion.": "We use your data to improve your experience manage orders prevent fraud and send you relevant communications We do not share your information with third parties without your explicit consent",
+    "LimitacionDeResponsabilidadTitulo.": "Limitation of Liability",
+    "LimitacionDeResponsabilidad.": "FYZ is not responsible for content uploaded by users or for transactions made outside the platform",
 
-        "CookiesTitulo.": "Cookies",
-        "Cookies.": "We use cookies to remember your preferences and provide you with a personalized experience You can modify these settings in your browser",
+    "ModificacionesTitulo.": "Modifications",
+    "Modificaciones.": "We reserve the right to modify these terms at any time Users will be notified through the website when relevant changes occur",
 
-        "SeguridadTitulo.": "Security",
-        "Seguridad.": "We implement technical and organizational measures to protect your personal data from unauthorized access alteration or loss",
+    "PolíticaPriv.": "Privacy Policy",
+    "PolíticaPrivBienvenida.": "At Fresh Your Zone we are committed to protecting your privacy This policy explains how we collect use and protect your personal information",
 
-        "PolíticaCookies.": "Cookies Policy",
-        "PolíticaCookiesBienvenida.": "This page describes how FYZ uses cookies to improve your user experience",
+    "InformaciónRecopiladaTitulo.": "Information Collected",
+    "InformaciónRecopilada.": "We collect information such as name email address shipping address and purchase preferences when you register or make a purchase",
 
-        "QueSonCookiesTitulo.": "What are Cookies?",
-        "QueSonCookies.": "Cookies are small files stored on your device when you visit a website They help us better understand your behavior on our platform",
+    "UsoInformacionTitulo.": "Use of Information",
+    "UsoInformacion.": "We use your data to improve your experience manage orders prevent fraud and send you relevant communications We do not share your information with third parties without your explicit consent",
 
-        "TiposCookiesTitulo.": "Types of Cookies we Use",
-        "TiposCookiesEsencialTitulo.": "Essential Cookies",
-        "TiposCookiesEsencial.": "necessary for the operation of the website",
-    
-        "TiposCookiesRendimientoTitulo.": "Performance Cookies",
-        "TiposCookiesRendimiento.": "collect anonymous information about how you use our website",
-    
-        "TiposCookiesPersonalizacionTitulo.": "Personalization Cookies",
-        "TiposCookiesPersonalizacion.": "remember your preferences to provide you with tailored content",
+    "CookiesTitulo.": "Cookies",
+    "Cookies.": "We use cookies to remember your preferences and provide you with a personalized experience You can modify these settings in your browser",
 
-        "GestionCookiesTitulo.": "Managing Cookies",
-        "GestionCookies.": "You can accept reject or configure cookies from your browser Please note that some features may not work properly if you disable them",
+    "SeguridadTitulo.": "Security",
+    "Seguridad.": "We implement technical and organizational measures to protect your personal data from unauthorized access alteration or loss",
 
-        "AvisoLegal.": "Legal Notice",
-        "AvisoLegalBienvenida.": "In compliance with the Law on Information Society Services and Electronic Commerce this page is owned by FYZ",
+    "PolíticaCookies.": "Cookies Policy",
+    "PolíticaCookiesBienvenida.": "This page describes how FYZ uses cookies to improve your user experience",
 
-        "DatosTitularTitulo.": "Owner Information",
-        "TitularNombre.": "Name",
-        "TitularEmail.": "Contact Email",
-        "TitularDomicilio.": "Registered Office",
+    "QueSonCookiesTitulo.": "What are Cookies?",
+    "QueSonCookies.": "Cookies are small files stored on your device when you visit a website They help us better understand your behavior on our platform",
 
-        "PropiedadIntelectualTitulo.": "Intellectual Property",
-        "PropiedadIntelectual.": "All content on this website including text images logos and designs is the property of FYZ or used with permission Reproduction in whole or in part is prohibited without consent",
+    "TiposCookiesTitulo.": "Types of Cookies we Use",
+    "TiposCookiesEsencialTitulo.": "Essential Cookies",
+    "TiposCookiesEsencial.": "necessary for the operation of the website",
 
-        "ResponsabilidadTitulo.": "Responsability",
-        "Responsabilidad.": "FYZ is not responsible for misuse of the platform or for content generated by users",
+    "TiposCookiesRendimientoTitulo.": "Performance Cookies",
+    "TiposCookiesRendimiento.": "collect anonymous information about how you use our website",
 
-        "Contacto.": "Contact",
-        "SobreNosotros.": "About Us",
-        "SobreNosotrosDescripcion.": "Fresh Your Zone (FYZ) was born with the mission of offering a modern, safe, and sustainable digital space for buying and selling clothes. Our platform connects buyers and sellers from all over Spain to give a second life to garments",
-    
-        "SobreNosotrosValores.": "We believe in the circular economy and in the power of fashion as a tool for expression, without giving up environmental responsibility. FYZ puts in your hands the possibility of consciously renewing your wardrobe and collaborating in a community of committed users",
-    
-        "SobreNosotrosTecnologia.": "Developed with Laravel, FYZ offers a functional, secure, and attractive environment designed to enhance the user experience. Join the sustainable style revolution!",
+    "TiposCookiesPersonalizacionTitulo.": "Personalization Cookies",
+    "TiposCookiesPersonalizacion.": "remember your preferences to provide you with tailored content",
 
-        "Teléfono.": "Phone",
-        "Dirección.": "Location",
+    "GestionCookiesTitulo.": "Managing Cookies",
+    "GestionCookies.": "You can accept reject or configure cookies from your browser Please note that some features may not work properly if you disable them",
 
-        "Navegación.": "Navegation",
-        "Inicio.": "Home",
-        "Productos.": "Products",
-        "Favoritos.": "Favorites",
-        "Notificaciones.": "Notifications",
-        "Perfil.": "Profile",
+    "AvisoLegal.": "Legal Notice",
+    "AvisoLegalBienvenida.": "In compliance with the Law on Information Society Services and Electronic Commerce this page is owned by FYZ",
 
-        "DerechosReservados.": "All Rights Reserved"
-    }
+    "DatosTitularTitulo.": "Owner Information",
+    "TitularNombre.": "Name",
+    "TitularEmail.": "Contact Email",
+    "TitularDomicilio.": "Registered Office",
+
+    "PropiedadIntelectualTitulo.": "Intellectual Property",
+    "PropiedadIntelectual.": "All content on this website including text images logos and designs is the property of FYZ or used with permission Reproduction in whole or in part is prohibited without consent",
+
+    "ResponsabilidadTitulo.": "Responsability",
+    "Responsabilidad.": "FYZ is not responsible for misuse of the platform or for content generated by users",
+
+    "Contacto.": "Contact",
+    "SobreNosotros.": "About Us",
+    "SobreNosotrosDescripcion.": "Fresh Your Zone (FYZ) was born with the mission of offering a modern, safe, and sustainable digital space for buying and selling clothes. Our platform connects buyers and sellers from all over Spain to give a second life to garments",
+
+    "SobreNosotrosValores.": "We believe in the circular economy and in the power of fashion as a tool for expression, without giving up environmental responsibility. FYZ puts in your hands the possibility of consciously renewing your wardrobe and collaborating in a community of committed users",
+
+    "SobreNosotrosTecnologia.": "Developed with Laravel, FYZ offers a functional, secure, and attractive environment designed to enhance the user experience. Join the sustainable style revolution!",
+
+    "Teléfono.": "Phone",
+    "Dirección.": "Location",
+
+    "Navegación.": "Navegation",
+    "Inicio.": "Home",
+    "Productos.": "Products",
+    "Favoritos.": "Favorites",
+    "Notificaciones.": "Notifications",
+    "Perfil.": "Profile",
+
+    "DerechosReservados.": "All Rights Reserved"
+}

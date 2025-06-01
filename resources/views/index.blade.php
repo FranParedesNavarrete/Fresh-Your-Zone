@@ -6,10 +6,10 @@
     <div class="navbar navbar-expand-lg navbar-category pb-2">
         <div class="container">
             @foreach($categories as $category)
-                <a class="text-dark category-navbar" href="/products?category={{ $category }}">{{ ucfirst($category) }}</a>
+                <a class="text-dark category-navbar" href="/products?category={{ $category }}">{{ ucfirst(__($category)) }}</a>
             @endforeach
 
-            <a class="text-dark category-navbar" href="/products">Todas las categorias</a>
+            <a class="text-dark category-navbar" href="/products">{{ __('TodasCategorias.') }}</a>
         </div>
     </div>
 
@@ -25,7 +25,7 @@
                 @endif
                 <div class="container">
                     <br>
-                    <h5>{{ ucfirst($categoryIndex) }}</h5>
+                    <h5>{{ ucfirst(__($categoryIndex)) }}</h5>
                     <div class="d-flex overflow-auto flex-nowrap gap-2">
                         @foreach($products as $product)
                             @if ($product->category == $categoryIndex)
@@ -41,7 +41,7 @@
 
                                 <div class="card product-card position-relative">
                                     <div class="position-absolute top-0 end-0 p-2 z-3">
-                                        <i id="favorite{{ $product->id }}" class="bi bi-heart{{ $isFavorite ? '-fill text-danger' : '' }} heartDarkmode" onclick="toggleFav(this, {{ $product->id }}, {{ auth()->check() ? 'true' : 'false' }})" title="Botón de favoritos"></i>
+                                        <i id="favorite{{ $product->id }}" class="bi bi-heart{{ $isFavorite ? '-fill text-danger' : '' }} heartDarkmode" onclick="toggleFav(this, {{ $product->id }}, {{ auth()->check() ? 'true' : 'false' }})" title="{{ __('Favoritos.') }}"></i>
                                     </div>
 
                                     <a href="{{ route('products.show', $product->slug ) }}" class="text-decoration-none text-dark">
@@ -59,8 +59,8 @@
             @endforeach
         @else
             <div class="text-center mt-5">
-                <h2>No hay productos disponibles</h2>
-                <p>Hazte <a href="/profile">vendedor</a> y rompe el hielo.</p>
+                <h2>{{ __('NoProductos.') }}</h2>
+                <p>{{ __('Hazte.') }}<a href="/profile">{{ __('Vendedor.') }}</a>{{ __('RompeHielo.') }}.</p>
             </div>
         @endif
     </div>
