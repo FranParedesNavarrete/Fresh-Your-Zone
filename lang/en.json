@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "_comment": "Traducciones del header",
     "TodasCategorias.": "All Categories",
@@ -28,6 +29,19 @@
     "Información.": "Information",
     "Términos.": "Terms and Conditions",
     "TérminosBienvenido.": "Welcome to Fresh Your Zone (FYZ). By accessing or using our platform, you agree to be bound by the following terms and conditions of use. If you do not agree with them, please do not use our services",
+=======
+    {
+        "_comment": "Traducciones del header",
+        "TodasCategorias.": "All Categories",
+
+        "_comment": "Traducciones del footer",
+        "Información.": "Information",
+        "Términos.": "Terms and Conditions",
+        "TérminosBienvenido.": "Welcome to Fresh Your Zone (FYZ). By accessing or using our platform, you agree to be bound by the following terms and conditions of use. If you do not agree with them, please do not use our services",
+        
+        "UsoDelSitioTitulo.": "Use of the Site",
+        "UsoDelSitio.": "The user agrees to use this platform solely for legal purposes and in accordance with the provisions of this document Any fraudulent or unlawful use will result in immediate expulsion",
+>>>>>>> e009148e762ea9b75b28ed1ec1ca1f9825ff7c38
     
     "UsoDelSitioTitulo.": "Use of the Site",
     "UsoDelSitio.": "The user agrees to use this platform solely for legal purposes and in accordance with the provisions of this document Any fraudulent or unlawful use will result in immediate expulsion",
