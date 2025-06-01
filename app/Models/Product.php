@@ -35,6 +35,11 @@ class Product extends Model
         });
     }
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     // Relación con el vendedor
     public function sellers()
     {
