@@ -76,7 +76,7 @@ main {
 
 .user-info {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 2rem;
 }
 
@@ -126,7 +126,7 @@ i {
 }
 
 #mobileSidebar {
-  width: 280px;
+  width: 100%;
 }
 
 .buy-btn {
@@ -152,6 +152,10 @@ i {
   background-color: #d4cdc5;
   border-color: #f4f4f2;
   color: #262525 !important;
+}
+
+.profile-list-filter {
+  display: flex;
 }
 
 .darkmodeBtn {
@@ -475,5 +479,8 @@ i {
     justify-content: space-between;
     border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
     display: flex;
+  }
+  .profile-list-filter {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */

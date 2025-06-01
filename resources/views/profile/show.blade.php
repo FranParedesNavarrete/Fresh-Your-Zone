@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="container-fluid">
-        <div class="d-flex">
+        <div class="profile-list-filter">
             @include('partials.sidebar')
 
             <div class="container container-update">

@@ -28,7 +28,7 @@
               <ul class="list-unstyled">
                 <li><a class="text-dark" href="{{ $request->fullUrlWithQuery(['category' => null]) }}">Todas las categorías</a></li>
                 @foreach ($categories as $category)
-                  <li><a class="text-dark" href="{{ $request->fullUrlWithQuery(['category' => $category]) }}">{{ ucfirst($category) }}</a></li>
+                  <li><a class="text-dark" href="{{ $request->fullUrlWithQuery(['category' => $category]) }}">{{ ucfirst(__($category)) }}</a></li>
                 @endforeach
               </ul>
             </div>

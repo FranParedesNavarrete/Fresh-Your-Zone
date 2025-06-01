@@ -3,9 +3,9 @@
 @section('title', 'Panel de administración')
 @section('content')
     <div class="container-fluid">
-    <div class="d-flex">
+        <div class="profile-list-filter">
             @include('partials.sidebar')
-
+            <br>
             <div class="container">
                 <h2>Pedidos</h2>
                 <p></p>

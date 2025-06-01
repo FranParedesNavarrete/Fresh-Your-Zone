@@ -4,9 +4,9 @@
 
 @section('content')
     <div class="container-fluid">
-        <div class="d-flex">
+        <div class="profile-list-filter">
             @include('partials.sidebar')
-
+            <br>
             <div class="container">
                 <h2>Historial de Ventas</h2>
                 <p></p>
