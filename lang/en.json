@@ -1,6 +1,15 @@
-<<<<<<< HEAD
 {
+    "__comment": "Traducciones formularios de inicio de sesión",
+    "NombrePlaceholder.": "Enter your name",
+    "CorreoElectrónico.": "Email",
+    "CorreoElectrónicoPlaceholder.": "Enter your email",
+    "Contraseña.": "Password",
+    "ContraseñaPlaceholder.": "Enter your password",
+    "Enviar.": "Submit",
+
     "_comment": "Traducciones del header",
+    "Buscar.": "Search",
+
     "TodasCategorias.": "All Categories",
     "accesorios": "accessories",
     "calzado": "footwear",
@@ -25,23 +34,18 @@
     "Vendedor.": " vendor ",
     "RompeHielo.": "and break the ice",
 
+    "__comment": "Traducciones sidebar",
+    "Pedidos.": "Orders",
+    "GestionarProductos.": "Manage Products",
+    "HistorialVentas.": "Sales History",
+    "ListaUsuarios.": "User List",
+    "ListaProductos.": "Product List",
+    "ListaPedidos.": "Order List",
+
     "_comment": "Traducciones de footer",
     "Información.": "Information",
     "Términos.": "Terms and Conditions",
     "TérminosBienvenido.": "Welcome to Fresh Your Zone (FYZ). By accessing or using our platform, you agree to be bound by the following terms and conditions of use. If you do not agree with them, please do not use our services",
-=======
-    {
-        "_comment": "Traducciones del header",
-        "TodasCategorias.": "All Categories",
-
-        "_comment": "Traducciones del footer",
-        "Información.": "Information",
-        "Términos.": "Terms and Conditions",
-        "TérminosBienvenido.": "Welcome to Fresh Your Zone (FYZ). By accessing or using our platform, you agree to be bound by the following terms and conditions of use. If you do not agree with them, please do not use our services",
-        
-        "UsoDelSitioTitulo.": "Use of the Site",
-        "UsoDelSitio.": "The user agrees to use this platform solely for legal purposes and in accordance with the provisions of this document Any fraudulent or unlawful use will result in immediate expulsion",
->>>>>>> e009148e762ea9b75b28ed1ec1ca1f9825ff7c38
     
     "UsoDelSitioTitulo.": "Use of the Site",
     "UsoDelSitio.": "The user agrees to use this platform solely for legal purposes and in accordance with the provisions of this document Any fraudulent or unlawful use will result in immediate expulsion",

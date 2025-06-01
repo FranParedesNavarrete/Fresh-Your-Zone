@@ -6,19 +6,19 @@
         <div class="position-sticky pt-3">
             <h4 class="text-primary ps-3 d-none d-md-block">Menu</h4> 
             <div class="list-group">
-                <a class="nav-link list-group-item list-group-item-action {{ Str::endsWith(url()->current(), 'profile') ? 'active' : '' }}" href="/profile">Perfil</a>
-                <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'notifications') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/notifications">Notificaciones</a>
-                <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'favorites') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/favorites">Favoritos</a>
-                <a class="nav-link list-group-item list-group-item-action {{ Str::endsWith(url()->current(), '/history') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/history">Pedidos</a>
+                <a class="nav-link list-group-item list-group-item-action {{ Str::endsWith(url()->current(), 'profile') ? 'active' : '' }}" href="/profile">{{ __('Perfil.') }}</a>
+                <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'notifications') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/notifications">{{ __('Notificaciones.') }}</a>
+                <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'favorites') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/favorites">{{ __('Favoritos.') }}</a>
+                <a class="nav-link list-group-item list-group-item-action {{ Str::endsWith(url()->current(), '/history') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/history">{{ __('Pedidos.') }}</a>
                 @if(Auth::user()->role == 'seller')
-                    <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'manage-products') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/seller/manage-products">Gestionar Productos</a>
-                    <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'sales-history') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/seller/sales-history">Historial de Ventas</a>
+                    <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'manage-products') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/seller/manage-products">{{ __('GestionarProductos.') }}</a>
+                    <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'sales-history') ? 'active' : '' }}" href="/profile/{{ $user->slug }}/seller/sales-history">{{ __('HistorialVentas.') }}</a>
                 @elseif (Auth::user()->role == 'admin')
-                    <a class="nav-link list-group-item list-group-item-action {{ Str::endsWith(url()->current(), 'admin') ? 'active' : '' }}" href="/admin">Lista de Usuarios</a>
-                    <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'admin/products') ? 'active' : '' }}" href="/admin/products">Lista de Productos</a>
-                    <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'admin/orders') ? 'active' : '' }}" href="/admin/orders">Lista de Pedidos</a>
+                    <a class="nav-link list-group-item list-group-item-action {{ Str::endsWith(url()->current(), 'admin') ? 'active' : '' }}" href="/admin">{{ __('ListaUsuarios.') }}</a>
+                    <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'admin/products') ? 'active' : '' }}" href="/admin/products">{{ __('ListaProductos.') }}</a>
+                    <a class="nav-link list-group-item list-group-item-action {{ Str::contains(url()->current(), 'admin/orders') ? 'active' : '' }}" href="/admin/orders">{{ __('ListaPedidos.') }}</a>
                 @endif
-                <a class="nav-link list-group-item list-group-item-action text-danger" href="/logout">Log Out</a>
+                <a class="nav-link list-group-item list-group-item-action text-danger" href="/logout">{{ __('CerrarSesión.') }}</a>
             </div>
         </div>
     </nav>

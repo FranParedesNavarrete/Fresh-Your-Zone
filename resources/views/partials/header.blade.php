@@ -8,7 +8,7 @@
             <div class="collapse navbar-collapse" id="navHeader">
                 <div>
                     <form class="d-flex" action="{{ route('products.index') }}" method="GET">
-                        <input class="form-control me-2" id="searchInput" name="search" type="search" value="{{ request()->input('search') ?? ''}}" placeholder="Search" aria-label="Buscar...">
+                        <input class="form-control me-2" id="searchInput" name="search" type="search" value="{{ request()->input('search') ?? ''}}" placeholder="{{ __('Buscar.') }}" aria-label="Buscar...">
                         <button class="btn btn-outline-success" type="submit"><i class="bi bi-search" title="Botón de búsqueda"></i></button>
                     </form>
                 </div>

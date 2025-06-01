@@ -1,7 +1,16 @@
 {
+    "__comment": "Traducciones formularios de inicio de sesión",
+    "NombrePlaceholder.": "Ingrese su nombre",
+    "CorreoElectrónico.": "Correo Electrónico",
+    "CorreoElectrónicoPlaceholder.": "Ingrese su correo electrónico",
+    "Contraseña.": "Contraseña",
+    "ContraseñaPlaceholder.": "Ingrese su contraseña",
+    "Enviar.": "Enviar",
+
     "_comment": "Traducciones del header",
+    "Buscar.": "Buscar",
+
     "TodasCategorias.": "Todas las Categorías",
-<<<<<<< HEAD
     "accesorios": "accesorios",
     "calzado": "calzado",
     "deporte": "deporte",
@@ -24,12 +33,15 @@
     "Vendedor.": " vendedor ",
     "RompeHielo.": "y rompe el hielo",
 
+    "__comment": "Traducciones sidebar",
+    "Pedidos.": "Pedidos",
+    "GestionarProductos.": "Gestionar Productos",
+    "HistorialVentas.": "Historial de Ventas",
+    "ListaUsuartios.": "Lista de Usuarios",
+    "ListaProductos.": "Lista de Productos",
+    "ListaPedidos.": "Lista de Pedidos",
+
     "_comment": "Traducciones de footer",
-=======
-
-
-    "_comment": "Traducciones del footer",
->>>>>>> e009148e762ea9b75b28ed1ec1ca1f9825ff7c38
     "Información.": "Información",
     "Términos.": "Términos y Condiciones",
     "TérminosBienvenido.": "Bienvenido a Fresh Your Zone (FYZ). Al acceder o utilizar nuestra plataforma, aceptas estar sujeto a los siguientes términos y condiciones de uso. Si no estás de acuerdo con ellos, por favor no utilices nuestros servicios",
