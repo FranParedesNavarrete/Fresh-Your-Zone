@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('seller_id');
             $table->unsignedBigInteger('buyer_id');
             $table->unsignedBigInteger('product_id');
-            $table->enum('status', ['carrito', 'pedido', 'hecho', 'enviado', 'entregado']);
+            $table->enum('status', ['carrito', 'pedido', 'enviado a FZY', 'enviado', 'recibido', 'entregado']);
             $table->date('date');
             $table->decimal('price', 6, 2)->nullable();
             $table->string('delivery_address')->nullable();

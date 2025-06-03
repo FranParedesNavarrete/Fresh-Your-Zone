@@ -188,9 +188,15 @@ class AdminController extends Controller
 
     public function updateOrderStatus(Request $request)
     {
-        // Verifica que el usuario autenticado sea un administrador
-        if (auth()->user()->role != 'admin') {
-            return redirect()->route('index')->with('error', 'No tienes permiso para acceder a esta sección.');
+        if ($request->input('status') == 'recibido') {
+            $order = Order::find($request->input('order_id')); // Busca el pedido a modificar
+            $order->fill(['status' => $request->input('status')]);
+            $order->save(); 
+        } else {
+            // Verifica que el usuario autenticado sea un administrador
+            if (auth()->user()->role != 'admin' && auth()->user()->role != 'seller') {
+                return redirect()->route('index')->with('error', 'No tienes permiso para acceder a esta sección.');
+            }
         }
 
         $order = Order::find($request->input('order_id')); // Busca el pedido a modificar

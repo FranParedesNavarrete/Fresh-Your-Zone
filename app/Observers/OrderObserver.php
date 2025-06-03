@@ -78,7 +78,25 @@ class OrderObserver
                 $notification->type = 'transacción';
                 $notification->state = 'pending';
                 $notification->save();
-            } else {
+            } else if ($order->status === 'recibido') {
+                // Se crea la notifiación para el vendedor
+                $notification = new Notification();
+                $notification->user_id = $order->seller_id;
+                $notification->date = now();
+                $notification->subject = 'Tu pedido ha sido recibido por el comprado, en breves el equipo de FZY te depositará el dinero.';
+                $notification->type = 'transacción';
+                $notification->state = 'pending';
+                $notification->save();
+
+                // Se crea la notifiación para el comprador
+                $notification = new Notification();
+                $notification->user_id = $order->buyer_id;
+                $notification->date = now();
+                $notification->subject = '¡Pedido entregado! Gracias por tu espera, ahora puedes dejar tu opinión del producto.';
+                $notification->type = 'transacción';
+                $notification->state = 'pending';
+                $notification->save();
+            }else {
                 // Se crea la notifiación para el comprador en caso de que el estado sea 'entregado' o cualquier otro estado diferente a 'carrito' o 'pedido'
                 $notification = new Notification();
                 $notification->user_id = $order->buyer_id;
