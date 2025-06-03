@@ -18,16 +18,6 @@
 - Bootstrap 5
 - Git y  GitHub para control de versiones
 
-## Capturas de pantalla
- ### Página principal
- ![Index](public/assets/images/screenshots/index.png)
-
- ### Página de producto
- ![Product](public/assets/images/screenshots/product-details.png)
-
- ### Pasarela de pago
- ![Payment gateway](public/assets/images/screenshots/paymen-gateway.png)
-
 ## FZY Sponsors
 Queremos agradecer a los sponsors que apoyan el desarrollo de FZY. Si estas interesado en ser un sponsor, por favor visita este [enlace de afiliación](https://www.google.com/url?sa=i&url=https%3A%2F%2Fx.com%2FDefensaAnimalZA%2Fstatus%2F1450733997156360194&psig=AOvVaw2n66AvogwpcA9r8J4LHViI&ust=1748433841333000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOD_-uHNw40DFQAAAAAdAAAAABAE).
 
